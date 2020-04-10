@@ -1,6 +1,5 @@
 .page {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
 }
 .page-wrapper {
   max-width: 1920px;
@@ -8,31 +7,46 @@
   margin: 0 auto;
 }
 .page__header {
+  width: 100%;
   height: 103px;
-  width: calc(100% - 160px);
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.page__content {
+  width: calc(100% - 160px);
+  height: auto;
+  margin: 0 auto;
+  margin-top: 103px;
+}
+.page__footer {
+  width: 100%;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background: #fff;
 }
 .header__signature {
   height: 40px;
   min-height: 36px;
   width: 144px;
   margin-top: 42px;
+  margin-left: 80px;
 }
 .header__nav-up {
   width: 754px;
   height: 50px;
   margin-top: 31px;
+  margin-right: 48px;
 }
 
 .signature__link {
   font-size: 26px;
-  line-height: 36px;
+  line-height: 40px;
   font-family: "Cinzel", serif;
   color: #303131;
   letter-spacing: 6px;
@@ -64,6 +78,117 @@
 }
 .nav-up__link:hover {
   color: #8b98a7;
+}
+
+.content__inscription-block {
+  width: 100%;
+  min-width: 980px;
+  min-height: 900px;
+  position: relative;
+}
+
+.inscription-block {
+  background: url("../img/main-bgd-1506x900.png") center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inscription-block__filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.35;
+  background-color: #273a4e;
+}
+.inscription-block__title {
+  color: #fff;
+  font-size: 70px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 7px;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.inscription-block__subtitle {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 11px;
+  text-transform: uppercase;
+  font-weight: 300;
+  z-index: 1;
+}
+.inscription-block__view {
+  height: 40px;
+  min-height: 22px;
+  width: 142px;
+  border: 1px solid #fff;
+  margin-top: 36px;
+  z-index: 1;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+}
+.inscription-block__view:hover {
+  background-color: #273a4e;
+  border-color: #273a4e;
+}
+.inscription-block__link {
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+
+.footer {
+  padding: 50px 0 25px;
+}
+.footer__social-bar {
+  width: 168px;
+  height: 24px;
+  margin: 0 auto;
+}
+.footer__copyright {
+  width: 740px;
+  margin: 15px auto 0;
+}
+
+.social-bar__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.social-bar__item {
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+.social-bar__item:last-child {
+  margin-right: 0;
+}
+.social-bar__link {
+  display: block;
+  width: 100%;
+}
+.social-bar__img {
+  display: block;
+  width: 100%;
+}
+
+.copyright__note {
+  width: 100%;
+  text-align: center;
+  color: #303131;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+.copyright__link {
+  color: #000;
 }
 
 /*# sourceMappingURL=main-page.css.map */

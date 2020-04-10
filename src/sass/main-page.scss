@@ -1,15 +1,26 @@
 .page {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
   &-wrapper {
     max-width: 1920px;
     height: auto;
     margin: 0 auto;
   }
   &__header {
+    width: 100%;
     height: 103px;
-    width: calc(100% - 160px);
     margin: 0 auto;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  &__content {
+    width: calc(100% - 160px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 103px;
+  }
+  &__footer {
+    width: 100%;
   }
 }
 
@@ -17,23 +28,27 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background: #fff;
+
   &__signature {
     height: 40px;
     min-height: 36px;
     width: 144px;
     margin-top: 42px;
+    margin-left: 80px;
   }
   &__nav-up {
     width: 754px;
     height: 50px;
     margin-top: 31px;
+    margin-right: 48px;
   }
 }
 
 .signature {
   &__link {
     font-size: 26px;
-    line-height: 36px;
+    line-height: 40px;
     font-family: "Cinzel", serif;
     color: #303131;
     letter-spacing: 6px;
@@ -67,5 +82,122 @@
     &:hover {
       color: #8b98a7;
     }
+  }
+}
+
+.content {
+  &__inscription-block {
+    width: 100%;
+    min-width: 980px;
+    min-height: 900px;
+    position: relative;
+  }
+}
+
+.inscription-block {
+  background: url("../img/main-bgd-1506x900.png") center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.35;
+    background-color: #273a4e;
+  }
+  &__title {
+    color: #fff;
+    font-size: 70px;
+    font-family: "Cinzel", serif;
+    letter-spacing: 7px;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+  &__subtitle {
+    color: #fff;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    font-weight: 300;
+    z-index: 1;
+  }
+  &__view {
+    height: 40px;
+    min-height: 22px;
+    width: 142px;
+    border: 1px solid #fff;
+    margin-top: 36px;
+    z-index: 1;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    &:hover {
+      background-color: #273a4e;
+      border-color: #273a4e;
+    }
+  }
+  &__link {
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.footer {
+  padding: 50px 0 25px;
+  &__social-bar {
+    width: 168px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  &__copyright {
+    width: 740px;
+    margin: 15px auto 0;
+  }
+}
+
+.social-bar {
+  &__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.copyright {
+  &__note {
+    width: 100%;
+    text-align: center;
+    color: #303131;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+  }
+  &__link {
+    color: #000;
   }
 }
