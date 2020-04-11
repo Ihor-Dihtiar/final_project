@@ -62,9 +62,6 @@
 .nav-up__item {
   flex-grow: 1;
 }
-.nav-up__item:first-child > a {
-  color: #8b98a7;
-}
 .nav-up__link {
   font-size: 16px;
   line-height: 50px;
@@ -77,6 +74,12 @@
   transition: color 0.4s ease 0s;
 }
 .nav-up__link:hover {
+  color: #8b98a7;
+}
+.nav-up__link.home {
+  color: #8b98a7;
+}
+.nav-up__link.portfolio {
   color: #8b98a7;
 }
 
@@ -93,13 +96,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.inscription-block__filter {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0.35;
-  background-color: #273a4e;
 }
 .inscription-block__title {
   color: #fff;
@@ -119,20 +115,31 @@
   font-weight: 300;
   z-index: 1;
 }
-.inscription-block__view {
+.inscription-block__view-button {
   height: 40px;
   min-height: 22px;
   width: 142px;
-  border: 1px solid #fff;
-  margin-top: 36px;
   z-index: 1;
+  margin-top: 36px;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.35;
+  background-color: #273a4e;
+}
+
+.view-button {
+  border: 1px solid #fff;
   transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
 }
-.inscription-block__view:hover {
+.view-button:hover {
   background-color: #273a4e;
   border-color: #273a4e;
 }
-.inscription-block__link {
+.view-button__link {
   display: block;
   font-size: 16px;
   line-height: 40px;

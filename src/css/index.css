@@ -97,9 +97,6 @@ a {
 .nav-up__item {
   flex-grow: 1;
 }
-.nav-up__item:first-child > a {
-  color: #8b98a7;
-}
 .nav-up__link {
   font-size: 16px;
   line-height: 50px;
@@ -112,6 +109,12 @@ a {
   transition: color 0.4s ease 0s;
 }
 .nav-up__link:hover {
+  color: #8b98a7;
+}
+.nav-up__link.home {
+  color: #8b98a7;
+}
+.nav-up__link.portfolio {
   color: #8b98a7;
 }
 
@@ -128,13 +131,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.inscription-block__filter {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0.35;
-  background-color: #273a4e;
 }
 .inscription-block__title {
   color: #fff;
@@ -154,20 +150,31 @@ a {
   font-weight: 300;
   z-index: 1;
 }
-.inscription-block__view {
+.inscription-block__view-button {
   height: 40px;
   min-height: 22px;
   width: 142px;
-  border: 1px solid #fff;
-  margin-top: 36px;
   z-index: 1;
+  margin-top: 36px;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.35;
+  background-color: #273a4e;
+}
+
+.view-button {
+  border: 1px solid #fff;
   transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
 }
-.inscription-block__view:hover {
+.view-button:hover {
   background-color: #273a4e;
   border-color: #273a4e;
 }
-.inscription-block__link {
+.view-button__link {
   display: block;
   font-size: 16px;
   line-height: 40px;
@@ -224,6 +231,74 @@ a {
 }
 .copyright__link {
   color: #000;
+}
+
+.content__portfolio {
+  width: 100%;
+}
+
+.portfolio__head {
+  width: 100%;
+  height: 114px;
+  display: flex;
+  align-items: center;
+}
+.portfolio__title {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  width: 416px;
+}
+.portfolio__block {
+  width: 100%;
+  min-height: 869px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(318px, 1fr));
+  grid-column-gap: 11px;
+}
+.portfolio__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.portfolio__item:nth-child(1) {
+  background: url("../img/portfolio-left-img.png") center center/cover no-repeat;
+}
+.portfolio__item:nth-child(2) {
+  background: url("../img/food-and-serv.png") center center/cover no-repeat;
+}
+.portfolio__item:nth-child(3) {
+  background: url("../img/baked-goods.png") center center/cover no-repeat;
+}
+.portfolio__filter {
+  opacity: 0.23;
+}
+.portfolio__inscription {
+  color: #fff;
+  font-size: 40px;
+  line-height: 54px;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 331px;
+  z-index: 1;
+}
+.portfolio__view-button {
+  width: 110px;
+  margin-top: 19px;
+  z-index: 1;
+}
+
+.inscription-block__view {
+  width: 110px;
 }
 
 /*# sourceMappingURL=index.css.map */
