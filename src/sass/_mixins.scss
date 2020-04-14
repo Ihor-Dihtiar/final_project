@@ -1,0 +1,9 @@
+@mixin analog-avenir-light {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+
+@mixin normalize-to-block {
+  display: block;
+  width: 100%;
+}

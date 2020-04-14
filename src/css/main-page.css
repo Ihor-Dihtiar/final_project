@@ -63,12 +63,12 @@
   flex-grow: 1;
 }
 .nav-up__link {
-  font-size: 16px;
-  line-height: 50px;
   font-family: "Nunito", sans-serif;
-  color: #303131;
+  font-weight: 300;
   display: block;
   width: 100%;
+  line-height: 50px;
+  color: #303131;
   height: 100%;
   text-align: center;
   transition: color 0.4s ease 0s;
@@ -79,7 +79,10 @@
 .nav-up__link.home {
   color: #8b98a7;
 }
-.nav-up__link.portfolio {
+.nav-up__link.portfolio-page {
+  color: #8b98a7;
+}
+.nav-up__link.about-page {
   color: #8b98a7;
 }
 
@@ -107,12 +110,12 @@
   z-index: 1;
 }
 .inscription-block__subtitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
   color: #fff;
   font-size: 20px;
-  font-family: "Nunito", sans-serif;
   letter-spacing: 11px;
   text-transform: uppercase;
-  font-weight: 300;
   z-index: 1;
 }
 .inscription-block__view-button {
@@ -140,11 +143,11 @@
   border-color: #273a4e;
 }
 .view-button__link {
-  display: block;
-  font-size: 16px;
-  line-height: 40px;
   font-family: "Nunito", sans-serif;
   font-weight: 300;
+  display: block;
+  width: 100%;
+  line-height: 40px;
   color: #fff;
   text-align: center;
 }
@@ -186,13 +189,12 @@
 }
 
 .copyright__note {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
   width: 100%;
   text-align: center;
   color: #303131;
-  font-size: 16px;
   line-height: 24px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 300;
 }
 .copyright__link {
   color: #000;

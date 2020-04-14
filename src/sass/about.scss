@@ -1,0 +1,70 @@
+@import "./mixins";
+@import "./variables";
+
+.content {
+  &__about {
+    width: 100%;
+    height: auto;
+    min-width: 980px;
+    height: 884px;
+  }
+}
+
+.about {
+  display: flex;
+
+  &__left-block {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__img {
+    @include normalize-to-block;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+  }
+
+  &__right-block {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.right-block {
+  background-color: #f0f3f6;
+  &__container {
+    width: 425px;
+    height: 100%;
+    margin-left: calc((100% - 490px) * 0.5);
+    position: relative;
+    left: 18px;
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "Cinzel", serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 156px;
+    margin-bottom: 27px;
+  }
+  &__paragraph {
+    @include analog-avenir-light;
+    line-height: 1.5rem;
+  }
+  &__subtitle {
+    @include analog-avenir-light;
+    font-size: 20px;
+    line-height: 1.5rem;
+    &.education {
+      margin-top: 49px;
+      margin-bottom: 13px;
+    }
+    &.awards {
+      margin-top: 59px;
+      margin-bottom: 12px;
+    }
+  }
+}

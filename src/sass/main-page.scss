@@ -1,3 +1,6 @@
+@import "./mixins";
+@import "./variables";
+
 .page {
   width: 100%;
   &-wrapper {
@@ -50,7 +53,7 @@
     font-size: 26px;
     line-height: 40px;
     font-family: "Cinzel", serif;
-    color: #303131;
+    color: $main-text-color;
     letter-spacing: 6px;
     width: 100%;
     text-transform: uppercase;
@@ -67,12 +70,10 @@
     flex-grow: 1;
   }
   &__link {
-    font-size: 16px;
+    @include analog-avenir-light;
+    @include normalize-to-block;
     line-height: 50px;
-    font-family: "Nunito", sans-serif;
-    color: #303131;
-    display: block;
-    width: 100%;
+    color: $main-text-color;
     height: 100%;
     text-align: center;
     transition: color 0.4s ease 0s;
@@ -82,7 +83,10 @@
     &.home {
       color: #8b98a7;
     }
-    &.portfolio {
+    &.portfolio-page {
+      color: #8b98a7;
+    }
+    &.about-page {
       color: #8b98a7;
     }
   }
@@ -113,12 +117,11 @@
     z-index: 1;
   }
   &__subtitle {
+    @include analog-avenir-light;
     color: #fff;
     font-size: 20px;
-    font-family: "Nunito", sans-serif;
     letter-spacing: 11px;
     text-transform: uppercase;
-    font-weight: 300;
     z-index: 1;
   }
   &__view-button {
@@ -146,11 +149,9 @@
     border-color: #273a4e;
   }
   &__link {
-    display: block;
-    font-size: 16px;
+    @include analog-avenir-light;
+    @include normalize-to-block;
     line-height: 40px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 300;
     color: #fff;
     text-align: center;
   }
@@ -185,24 +186,20 @@
     }
   }
   &__link {
-    display: block;
-    width: 100%;
+    @include normalize-to-block;
   }
   &__img {
-    display: block;
-    width: 100%;
+    @include normalize-to-block;
   }
 }
 
 .copyright {
   &__note {
+    @include analog-avenir-light;
     width: 100%;
     text-align: center;
-    color: #303131;
-    font-size: 16px;
+    color: $main-text-color;
     line-height: 24px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 300;
   }
   &__link {
     color: #000;

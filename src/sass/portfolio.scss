@@ -1,3 +1,6 @@
+@import "./mixins";
+@import "./variables";
+
 .content {
   &__portfolio {
     width: 100%;
@@ -65,8 +68,4 @@
     margin-top: 19px;
     z-index: 1;
   }
-}
-
-.inscription-block__view {
-  width: 110px;
 }
