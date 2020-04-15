@@ -111,62 +111,17 @@ a {
 .nav-up__link:hover {
   color: #8b98a7;
 }
-.nav-up__link.home {
+.nav-up__link_home {
   color: #8b98a7;
 }
-.nav-up__link.portfolio-page {
+.nav-up__link_portfolio-page {
   color: #8b98a7;
 }
-.nav-up__link.about-page {
+.nav-up__link_about-page {
   color: #8b98a7;
 }
-
-.content__inscription-block {
-  width: 100%;
-  min-width: 980px;
-  min-height: 900px;
-  position: relative;
-}
-
-.inscription-block {
-  background: url("../img/main-bgd-1506x900.png") center center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.inscription-block__title {
-  color: #fff;
-  font-size: 70px;
-  font-family: "Cinzel", serif;
-  letter-spacing: 7px;
-  font-weight: 400;
-  text-transform: uppercase;
-  z-index: 1;
-}
-.inscription-block__subtitle {
-  font-family: "Nunito", sans-serif;
-  font-weight: 300;
-  color: #fff;
-  font-size: 20px;
-  letter-spacing: 11px;
-  text-transform: uppercase;
-  z-index: 1;
-}
-.inscription-block__view-button {
-  height: 40px;
-  min-height: 22px;
-  width: 142px;
-  z-index: 1;
-  margin-top: 36px;
-}
-
-.filter {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0.35;
-  background-color: #273a4e;
+.nav-up__link_books-page {
+  color: #8b98a7;
 }
 
 .view-button {
@@ -235,17 +190,13 @@ a {
   color: #000;
 }
 
-.content__portfolio {
-  width: 100%;
-}
-
-.portfolio__head {
+.common-title {
   width: 100%;
   height: 114px;
   display: flex;
   align-items: center;
 }
-.portfolio__title {
+.common-title__title {
   font-size: 40px;
   line-height: 48px;
   font-family: "Cinzel", serif;
@@ -254,8 +205,61 @@ a {
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
-  width: 416px;
 }
+
+.content__inscription-block {
+  width: 100%;
+  min-width: 980px;
+  min-height: 900px;
+  position: relative;
+}
+
+.inscription-block {
+  background: url("../img/main-bgd-1506x900.png") center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inscription-block__title {
+  color: #fff;
+  font-size: 70px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 7px;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.inscription-block__subtitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 11px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.inscription-block__view-button {
+  height: 40px;
+  min-height: 22px;
+  width: 142px;
+  z-index: 1;
+  margin-top: 36px;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.35;
+  background-color: #273a4e;
+}
+
+.content__portfolio {
+  width: 100%;
+  min-width: 980px;
+}
+
 .portfolio__block {
   width: 100%;
   min-height: 869px;
@@ -356,13 +360,37 @@ a {
   font-size: 20px;
   line-height: 1.5rem;
 }
-.right-block__subtitle.education {
+.right-block__subtitle_education {
   margin-top: 49px;
   margin-bottom: 13px;
 }
-.right-block__subtitle.awards {
+.right-block__subtitle_awards {
   margin-top: 59px;
   margin-bottom: 12px;
+}
+
+.content__books {
+  width: 100%;
+  min-width: 980px;
+}
+
+.books__goods {
+  width: 100%;
+  height: 720px;
+  margin-top: 15px;
+  background-color: #f0f3f6;
+}
+.books__goods:nth-child(2) {
+  margin-top: 0;
+}
+
+.goods__container {
+  width: 438px;
+  height: 100%;
+  position: relative;
+  left: 35px;
+  margin-left: calc((100% - 980px) * 0.5);
+  padding-top: 213px;
 }
 
 /*# sourceMappingURL=index.css.map */

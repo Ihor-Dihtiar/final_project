@@ -1,3 +1,6 @@
+@import "./mixins";
+@import "./variables";
+
 * {
   box-sizing: border-box;
 }
@@ -31,4 +34,181 @@ ol {
 
 a {
   text-decoration: none;
+}
+
+.page {
+  width: 100%;
+  &-wrapper {
+    max-width: 1920px;
+    height: auto;
+    margin: 0 auto;
+  }
+  &__header {
+    width: 100%;
+    height: 103px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  &__content {
+    width: calc(100% - 160px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 103px;
+  }
+  &__footer {
+    width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+
+  &__signature {
+    height: 40px;
+    min-height: 36px;
+    width: 144px;
+    margin-top: 42px;
+    margin-left: 80px;
+  }
+  &__nav-up {
+    width: 754px;
+    height: 50px;
+    margin-top: 31px;
+    margin-right: 48px;
+  }
+}
+
+.signature {
+  &__link {
+    font-size: 26px;
+    line-height: 40px;
+    font-family: "Cinzel", serif;
+    color: $main-text-color;
+    letter-spacing: 6px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+.nav-up {
+  &__list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  &__item {
+    flex-grow: 1;
+  }
+  &__link {
+    @include analog-avenir-light;
+    @include normalize-to-block;
+    line-height: 50px;
+    color: $main-text-color;
+    height: 100%;
+    text-align: center;
+    transition: color 0.4s ease 0s;
+    &:hover {
+      color: $active-link-color;
+    }
+    &_home {
+      color: $active-link-color;
+    }
+    &_portfolio-page {
+      color: $active-link-color;
+    }
+    &_about-page {
+      color: $active-link-color;
+    }
+    &_books-page {
+      color: $active-link-color;
+    }
+  }
+}
+
+.view-button {
+  border: 1px solid #fff;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+  &:hover {
+    background-color: #273a4e;
+    border-color: #273a4e;
+  }
+  &__link {
+    @include analog-avenir-light;
+    @include normalize-to-block;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.footer {
+  padding: 50px 0 25px;
+  &__social-bar {
+    width: 168px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  &__copyright {
+    width: 740px;
+    margin: 15px auto 0;
+  }
+}
+
+.social-bar {
+  &__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    @include normalize-to-block;
+  }
+  &__img {
+    @include normalize-to-block;
+  }
+}
+
+.copyright {
+  &__note {
+    @include analog-avenir-light;
+    width: 100%;
+    text-align: center;
+    color: $main-text-color;
+    line-height: 24px;
+  }
+  &__link {
+    color: #000;
+  }
+}
+
+.common-title {
+  width: 100%;
+  height: 114px;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "Cinzel", serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

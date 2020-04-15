@@ -1,0 +1,34 @@
+@import "./mixins";
+@import "./variables";
+
+.content {
+  &__books {
+    width: 100%;
+    min-width: 980px;
+  }
+}
+
+.books {
+  &__goods {
+    width: 100%;
+    height: 720px;
+    margin-top: 15px;
+    background-color: #f0f3f6;
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}
+
+.goods {
+  &__container {
+    width: 438px;
+    height: 100%;
+    position: relative;
+    left: 35px;
+    margin-left: calc((100% - 980px) * 0.5);
+    padding-top: 213px;
+  }
+  &__title {
+  }
+}
