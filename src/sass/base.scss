@@ -131,18 +131,31 @@ a {
 }
 
 .view-button {
-  border: 1px solid #fff;
-  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
-  &:hover {
-    background-color: #273a4e;
-    border-color: #273a4e;
-  }
+  height: 40px;
   &__link {
     @include analog-avenir-light;
-    @include normalize-to-block;
-    line-height: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     text-align: center;
+    border: 1px solid #fff;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    &:hover {
+      background-color: #273a4e;
+      border-color: #273a4e;
+    }
+    &_buy {
+      border: 1px solid $main-text-color;
+      color: #141d27;
+      transition: color 0.4s ease 0s, border-color 0.4s ease 0s,
+        background-color 0.4s ease 0s;
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 }
 
