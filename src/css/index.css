@@ -4,7 +4,8 @@
 
 html {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 300;
   color: #303131;
 }
 
@@ -19,7 +20,10 @@ h5,
 h6,
 p,
 figure,
-button {
+button,
+input,
+svg,
+span {
   margin: 0;
   padding: 0;
 }
@@ -121,6 +125,9 @@ a {
   color: #8b98a7;
 }
 .nav-up__link_books-page {
+  color: #8b98a7;
+}
+.nav-up__link_blog {
   color: #8b98a7;
 }
 
@@ -458,6 +465,82 @@ a {
   width: 600px;
   height: 438px;
   object-fit: cover;
+}
+
+.content__blog {
+  width: 100%;
+  min-width: 980px;
+}
+
+.blog__container {
+  width: 100%;
+  background-color: #f0f3f6;
+}
+.blog__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px;
+}
+
+.search__all-posts {
+  color: #141d27;
+}
+.search__input-block {
+  width: 200px;
+  margin-right: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.input-block {
+  transition: all 0.5s ease;
+}
+.input-block__dandruff {
+  fill: #303131;
+}
+.input-block__input {
+  outline: none;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 1px 0 0 29px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.5s ease;
+  display: inline-block;
+  color: #303131;
+  padding-right: 20px;
+  font: normal normal normal 16px/1.4em "Nunito", sans-serif;
+}
+.input-block__input::placeholder {
+  color: #bdb6b6;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.input-block__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto -5px auto 0;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.input-block__cross {
+  fill: #303131;
 }
 
 /*# sourceMappingURL=index.css.map */

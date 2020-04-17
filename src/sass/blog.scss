@@ -1,0 +1,85 @@
+@import "./mixins";
+@import "./variables";
+
+.content {
+  &__blog {
+    width: 100%;
+    min-width: 980px;
+  }
+}
+
+.blog {
+  &__container {
+    width: 100%;
+    background-color: #f0f3f6;
+  }
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 20px;
+  }
+}
+
+.search {
+  &__all-posts {
+    color: #141d27;
+  }
+  &__input-block {
+    width: 200px;
+    margin-right: 16px;
+    height: 16px;
+    position: relative;
+  }
+}
+
+.input-block {
+  transition: all 0.5s ease;
+  &__dandruff {
+    fill: $main-text-color;
+  }
+  &__input {
+    outline: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 1px 0 0 29px;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    transition: all 0.5s ease;
+    display: inline-block;
+    // display: none;
+    color: $main-text-color;
+    padding-right: 20px;
+    font: normal normal normal 16px/1.4em "Nunito", sans-serif;
+    &::placeholder {
+      color: rgb(189, 182, 182);
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto -5px auto 0;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  &__cross {
+    fill: $main-text-color;
+  }
+}

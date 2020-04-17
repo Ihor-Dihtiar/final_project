@@ -4,7 +4,8 @@
 
 html {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 300;
   color: #303131;
 }
 
@@ -19,7 +20,10 @@ h5,
 h6,
 p,
 figure,
-button {
+button,
+input,
+svg,
+span {
   margin: 0;
   padding: 0;
 }
@@ -121,6 +125,9 @@ a {
   color: #8b98a7;
 }
 .nav-up__link_books-page {
+  color: #8b98a7;
+}
+.nav-up__link_blog {
   color: #8b98a7;
 }
 
