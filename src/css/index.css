@@ -490,7 +490,6 @@ a {
   color: #141d27;
 }
 .search__input-block {
-  width: 200px;
   margin-right: 16px;
   height: 16px;
   position: relative;
@@ -499,8 +498,13 @@ a {
 .input-block {
   transition: all 0.5s ease;
 }
+.input-block__container {
+  width: 200px;
+}
 .input-block__dandruff {
   fill: #303131;
+  position: absolute;
+  top: 0;
 }
 .input-block__input {
   outline: none;
@@ -508,6 +512,7 @@ a {
   left: 0;
   margin: 0;
   width: 100%;
+  height: 20px;
   border: 0;
   border-radius: 0;
   padding: 1px 0 0 29px;
@@ -526,6 +531,13 @@ a {
   font-size: 14px;
   letter-spacing: 1px;
 }
+.input-block__underline {
+  height: 1px;
+  background-color: #303131;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  margin-top: 3px;
+}
 .input-block__btn {
   position: absolute;
   top: 0;
@@ -541,6 +553,7 @@ a {
 }
 .input-block__cross {
   fill: #303131;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=index.css.map */
