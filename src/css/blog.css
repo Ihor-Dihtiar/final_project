@@ -13,8 +13,14 @@
   align-items: center;
   height: 80px;
   margin: 0 auto;
+  width: 100%;
   max-width: 980px;
   padding: 0 20px;
+}
+.blog__posts {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
 }
 
 .search__all-posts {
@@ -47,14 +53,13 @@
   border: 0;
   border-radius: 0;
   padding: 1px 0 0 29px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
   background: transparent;
   transition: all 0.5s ease;
   display: inline-block;
   color: #303131;
   padding-right: 20px;
-  font: normal normal normal 16px/1.4em "Nunito", sans-serif;
+  font-weight: 300;
 }
 .input-block__input::placeholder {
   color: #bdb6b6;
@@ -85,6 +90,120 @@
 .input-block__cross {
   fill: #303131;
   opacity: 0.8;
+}
+
+.post {
+  width: 100%;
+  padding: 16px;
+}
+.post__wrapper {
+  display: flex;
+  height: 351px;
+}
+.post__img-block {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  position: relative;
+  background: url("../img/blog-holiday.png") 50%/cover no-repeat;
+}
+.post__img-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.post__img {
+  display: block;
+  width: 100%;
+}
+.post__description {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 48px 37px;
+  background-color: #fff;
+}
+
+.publication-info {
+  display: flex;
+  align-items: center;
+  height: 34px;
+}
+.publication-info__wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.publication-info__icon {
+  width: 32px;
+  height: 32px;
+  background: url("../img/blog-icon-i.png") 50%/cover no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.publication-info__block {
+  padding-left: 10px;
+  font-size: 12px !important;
+  display: flex;
+  flex-direction: column;
+}
+.publication-info__author {
+  height: 19px;
+}
+.publication-info__share {
+  width: 24px;
+  height: 24px;
+  margin: 0 -9px 0 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+.author__name {
+  font-weight: normal;
+}
+.author__icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.author__svg {
+  fill: #303131;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.time__separator {
+  background-color: #303131;
+  width: 2px;
+  height: 2px;
+  margin: 0 8px;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+}
+.share__btn {
+  font-size: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.share__svg {
+  fill: #303131;
 }
 
 /*# sourceMappingURL=blog.css.map */
