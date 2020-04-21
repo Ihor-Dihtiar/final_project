@@ -26,7 +26,7 @@
   &__posts {
     margin: 0 auto;
     width: 100%;
-    max-width: 980px;
+    max-width: 972px;
   }
 }
 
@@ -114,7 +114,24 @@
     flex-shrink: 0;
     flex-basis: 50%;
     position: relative;
-    background: url("../img/blog-holiday.png") 50% / cover no-repeat;
+    &_holiday {
+      background: url("../img/blog-holiday.png") 50% / cover no-repeat;
+    }
+    &_backdrops {
+      background: url("../img/blog-backdrops.png") 50% / cover no-repeat;
+    }
+    &_drip {
+      background: url("../img/blog-drip.png") 50% / cover no-repeat;
+    }
+    &_styling {
+      background: url("../img/blog-styling.png") 50% / cover no-repeat;
+    }
+    &_sizzle {
+      background: url("../img/blog-sizzle.png") 50% / cover no-repeat;
+    }
+    &_eating {
+      background: url("../img/blog-eating.png") 50% / cover no-repeat;
+    }
   }
   &__img-link {
     position: absolute;
@@ -130,8 +147,13 @@
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 40px 48px 37px;
     background-color: #fff;
+  }
+  &__header-and-text {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -212,5 +234,74 @@
   }
   &__svg {
     fill: $main-text-color;
+  }
+}
+
+.publication-text {
+  margin-top: 18px;
+  &__header {
+    font-family: "Cinzel", serif;
+    font-size: 28px;
+    color: $main-text-color;
+    font-weight: normal;
+    line-height: normal;
+  }
+  &__content {
+    color: $main-text-color;
+    margin-top: 12px;
+    line-height: 1.5rem;
+    opacity: 0.9;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+}
+
+.publication-footer {
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $main-text-color;
+    opacity: 0.2;
+    margin-bottom: 15px;
+  }
+  &__activity {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  &__views-comments {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0.9;
+  }
+  &__comments {
+    margin-left: 16px;
+    color: $main-text-color;
+  }
+  &__likes {
+    display: flex;
+    align-items: center;
+  }
+  &__likes-count {
+    padding-right: 5px;
+  }
+  &__like-btn {
+    font-size: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  &__svg {
+    fill: transparent;
+    stroke: #e84a43;
+    stroke-width: 1.5px;
   }
 }
