@@ -494,18 +494,25 @@ a {
   position: relative;
 }
 
-.input-block {
+.input-block__container {
   transition: all 0.5s ease;
 }
-.input-block__container {
+.input-block__container.open {
   width: 200px;
 }
 .input-block__dandruff {
   fill: #303131;
   position: absolute;
   top: 0;
+  right: 0;
+}
+.input-block__dandruff.open {
+  right: initial;
 }
 .input-block__input {
+  display: none;
+}
+.input-block__input.open {
   outline: none;
   top: 0;
   left: 0;
@@ -523,20 +530,31 @@ a {
   padding-right: 20px;
   font-weight: 300;
 }
-.input-block__input::placeholder {
+.input-block__input.open::placeholder {
   color: #bdb6b6;
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 1px;
 }
+.input-block__background {
+  transition: all 0.5s ease;
+  height: 5px;
+  visibility: hidden;
+}
 .input-block__underline {
+  opacity: 0;
+}
+.input-block__underline.open {
   height: 1px;
   background-color: #303131;
   transition: all 0.5s ease;
   opacity: 0.5;
-  margin-top: 3px;
 }
 .input-block__btn {
+  display: none;
+}
+.input-block__btn.open {
+  display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
@@ -742,6 +760,11 @@ a {
   align-items: center;
 }
 .publication-footer__likes-count {
+  display: none;
+  transition: all 0.3s ease;
+}
+.publication-footer__likes-count.like {
+  display: block;
   padding-right: 5px;
 }
 .publication-footer__like-btn {
@@ -755,6 +778,10 @@ a {
   fill: transparent;
   stroke: #e84a43;
   stroke-width: 1.5px;
+  transition: fill 0.3s ease;
+}
+.publication-footer__svg.like {
+  fill: #e84a43;
 }
 
 /*# sourceMappingURL=index.css.map */
