@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/sass/index.scss":
+/*!*****************************!*\
+  !*** ./src/sass/index.scss ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./src/scripts/index.js":
 /*!******************************!*\
   !*** ./src/scripts/index.js ***!
@@ -99,6 +110,8 @@
 __webpack_require__(/*! ./input-field.js */ "./src/scripts/input-field.js");
 
 __webpack_require__(/*! ./like.js */ "./src/scripts/like.js");
+
+__webpack_require__(/*! ../sass/index.scss */ "./src/sass/index.scss");
 
 /***/ }),
 
@@ -115,8 +128,10 @@ __webpack_require__(/*! ./like.js */ "./src/scripts/like.js");
 var dandruff = document.querySelector('.input-block__dandruff');
 var btn = document.querySelector('.input-block__btn');
 var animationFields = document.querySelectorAll('.input-animation');
+var input = document.querySelector('.input-block__input');
 dandruff.addEventListener('click', addClassOpen);
 btn.addEventListener('click', removeClassOpen);
+btn.addEventListener('click', clearInput);
 
 function addClassOpen() {
   animationFields.forEach(function (element) {
@@ -128,6 +143,10 @@ function removeClassOpen() {
   animationFields.forEach(function (element) {
     element.classList.remove('open');
   });
+}
+
+function clearInput() {
+  input.value = '';
 }
 
 /***/ }),

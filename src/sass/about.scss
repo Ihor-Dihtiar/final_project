@@ -1,10 +1,9 @@
-@import "./mixins";
-@import "./variables";
+@import './mixins';
+@import './variables';
 
 .content {
   &__about {
     width: 100%;
-    height: auto;
     min-width: 980px;
     height: 884px;
   }
@@ -43,7 +42,7 @@
   &__title {
     font-size: 40px;
     line-height: 48px;
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     letter-spacing: 2px;
     font-weight: 400;
     text-transform: uppercase;

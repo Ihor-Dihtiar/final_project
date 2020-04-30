@@ -1,5 +1,5 @@
-@import "./mixins";
-@import "./variables";
+@import './mixins';
+@import './variables';
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 html {
   font-size: 16px;
-  font-family: "Nunito", sans-serif, Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif, Arial, Helvetica, sans-serif;
   font-weight: 300;
   color: #303131;
 }
@@ -91,7 +91,7 @@ a {
   &__link {
     font-size: 26px;
     line-height: 40px;
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     color: $main-text-color;
     letter-spacing: 6px;
     width: 100%;
@@ -131,6 +131,9 @@ a {
       color: $active-link-color;
     }
     &_blog {
+      color: $active-link-color;
+    }
+    &_contact {
       color: $active-link-color;
     }
   }
@@ -220,11 +223,15 @@ a {
   &__title {
     font-size: 40px;
     line-height: 48px;
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     letter-spacing: 2px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     margin: 0 auto;
+
+    &_contact {
+      text-align: left;
+    }
   }
 }

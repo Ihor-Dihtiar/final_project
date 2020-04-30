@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Books</title>
+    <title>Contact</title>
     <link
       href="https://fonts.googleapis.com/css?family=Cinzel&display=swap"
       rel="stylesheet"
@@ -40,11 +40,7 @@
               </li>
 
               <li class="nav-up__item">
-                <a
-                  href="./books.html"
-                  class="nav-up__link nav-up__link_books-page"
-                  >Books</a
-                >
+                <a href="./books.html" class="nav-up__link">Books</a>
               </li>
 
               <li class="nav-up__item">
@@ -52,105 +48,87 @@
               </li>
 
               <li class="nav-up__item">
-                <a href="./contact.html" class="nav-up__link">Contact</a>
+                <a
+                  href="./contact.html"
+                  class="nav-up__link nav-up__link_contact"
+                  >Contact</a
+                >
               </li>
             </ul>
           </nav>
         </header>
 
         <main class="page__content content">
-          <div class="content__books books">
-            <div class="books__common-title common-title">
-              <h1 class="common-title__title">books</h1>
+          <div class="content__contact contact">
+            <div class="contact__img-block">
+              <img
+                src="./src/img/contact.png"
+                alt="Contact"
+                class="contact__img"
+              />
             </div>
 
-            <div class="books__goods">
-              <div class="goods__container">
-                <h2 class="goods__title">BREAKFASTS</h2>
-                <p class="goods__description">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It’s easy. Just click “Edit Text” or double click me to add
-                  your own content and make changes to the font.
-                </p>
-                <div class="goods__price-container">
-                  <span class="goods__price">40</span
-                  ><span class="goods__currency">$</span>
-                  <div class="goods__view-button view-button">
-                    <a
-                      href="https://ru.wix.com/templateslp/links"
-                      target="_blank"
-                      class="view-button__link view-button__link_buy"
-                      >Buy Now</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="goods__img-block">
-                <img
-                  src="./src/img/books-breakfasts.png"
-                  alt="BREAKFASTS"
-                  class="goods__img"
-                />
-              </div>
-            </div>
+            <div class="contact__info-block info-block">
+              <div class="info-block__description">
+                <h1
+                  class="info-block__title common-title__title common-title__title_contact"
+                >
+                  GET IN TOUCH
+                </h1>
 
-            <div class="books__goods">
-              <div class="goods__container">
-                <h2 class="goods__title">SUGAR & SPICE</h2>
-                <p class="goods__description">
+                <p class="info-block__text">
                   I'm a paragraph. Click here to add your own text and edit me.
-                  It’s easy. Just click “Edit Text” or double click me to add
-                  your own content and make changes to the font.
+                  I’m a great place for you to tell a story and let your users
+                  know a little more about you.
                 </p>
-                <div class="goods__price-container">
-                  <span class="goods__price">34</span
-                  ><span class="goods__currency">$</span>
-                  <div class="goods__view-button view-button">
-                    <a
-                      href="https://ru.wix.com/templateslp/links"
-                      target="_blank"
-                      class="view-button__link view-button__link_buy"
-                      >Buy Now</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="goods__img-block">
-                <img
-                  src="./src/img/books-sugar-and-spice.png"
-                  alt="SUGAR & SPICE"
-                  class="goods__img"
-                />
-              </div>
-            </div>
 
-            <div class="books__goods">
-              <div class="goods__container">
-                <h2 class="goods__title">HOLIDAY SEASON SPECIALS</h2>
-                <p class="goods__description">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It’s easy. Just click “Edit Text” or double click me to add
-                  your own content and make changes to the font.
+                <p class="info-block__text">
+                  Tel: 123-456-7890 | Email:
+                  <a href="#" class="info-block__mail">info@mysite.com</a>
                 </p>
-                <div class="goods__price-container">
-                  <span class="goods__price">25</span
-                  ><span class="goods__currency">$</span>
-                  <div class="goods__view-button view-button">
-                    <a
-                      href="https://ru.wix.com/templateslp/links"
-                      target="_blank"
-                      class="view-button__link view-button__link_buy"
-                      >Buy Now</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="goods__img-block">
-                <img
-                  src="./src/img/books-seasons.png"
-                  alt="HOLIDAY SEASON SPECIALS"
-                  class="goods__img"
-                />
+
+                <form action="" class="contact-form">
+                  <label for="name" class="contact-form__label"
+                    >Enter Your Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    class="contact-form__input"
+                  />
+
+                  <label for="email" class="contact-form__label"
+                    >Enter Your Email *</label
+                  >
+                  <input
+                    type="text"
+                    id="email"
+                    placeholder="Email"
+                    class="contact-form__input"
+                  />
+
+                  <label for="subject" class="contact-form__label"
+                    >Enter Your Subject *</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    class="contact-form__input"
+                  />
+
+                  <label for="message" class="contact-form__label"
+                    >Enter Your Message Here *</label
+                  >
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    class="contact-form__textarea"
+                  ></textarea>
+                </form>
+                <form action="" class="subscribe-form"></form>
               </div>
             </div>
           </div>
@@ -220,5 +198,6 @@
         </footer>
       </div>
     </div>
+    <script type="module" src="./build/bundle.js"></script>
   </body>
 </html>

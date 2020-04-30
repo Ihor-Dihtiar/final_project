@@ -11,6 +11,17 @@ class MyCoolButton extends React.Component {
   }
 }
 
+class TestReact extends React.Component {
+  render() {
+    return (
+      <h1>
+        If you see this message means my supposes are working and this is
+        awsome!
+      </h1>
+    );
+  }
+}
+
 class HelloMessage extends React.Component {
   test() {
     console.log('TEST CLICK');
@@ -31,3 +42,5 @@ ReactDOM.render(
   <HelloMessage name={prompt('ENter name')} />,
   document.querySelector('.blog__common-title')
 );
+
+ReactDOM.render(<TestReact />, document.querySelector('.signature'));
