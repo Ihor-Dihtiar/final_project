@@ -87,38 +87,38 @@
                   <a href="#" class="info-block__mail">info@mysite.com</a>
                 </p>
 
-                <form action="" class="contact-form">
-                  <label for="name" class="contact-form__label"
+                <form action="#" method="POST" class="contact-form">
+                  <label for="name" class="contact-form__label form__label"
                     >Enter Your Name *</label
                   >
                   <input
                     type="text"
                     id="name"
                     placeholder="Name"
-                    class="contact-form__input"
+                    class="contact-form__input form__input"
                   />
 
-                  <label for="email" class="contact-form__label"
+                  <label for="email" class="contact-form__label form__label"
                     >Enter Your Email *</label
                   >
                   <input
-                    type="text"
+                    type="email"
                     id="email"
                     placeholder="Email"
-                    class="contact-form__input"
+                    class="contact-form__input form__input"
                   />
 
-                  <label for="subject" class="contact-form__label"
+                  <label for="subject" class="contact-form__label form__label"
                     >Enter Your Subject *</label
                   >
                   <input
                     type="text"
                     id="subject"
                     placeholder="Subject"
-                    class="contact-form__input"
+                    class="contact-form__input form__input"
                   />
 
-                  <label for="message" class="contact-form__label"
+                  <label for="message" class="contact-form__label form__label"
                     >Enter Your Message Here *</label
                   >
                   <textarea
@@ -127,8 +127,44 @@
                     placeholder="Message"
                     class="contact-form__textarea"
                   ></textarea>
+
+                  <button type="submit" class="contact-form__btn form__btn">
+                    Submit
+                  </button>
+
+                  <div class="contact-form__message">
+                    <p class="contact-form__thank">Thanks for submitting!</p>
+                  </div>
                 </form>
-                <form action="" class="subscribe-form"></form>
+
+                <form action="" method="POST" class="subscribe-form">
+                  <p class="subscribe-form__paragraph">
+                    Stay Up-To-Date with New Posts
+                  </p>
+
+                  <label
+                    for="subscribe-email"
+                    class="subscribe-form__label form__label"
+                    >Enter your email here *</label
+                  >
+
+                  <div class="subscribe-form__input-btn">
+                    <input
+                      type="email"
+                      id="subscribe-email"
+                      placeholder="Email"
+                      class="subscribe-form__input form__input"
+                    />
+
+                    <button class="subscribe-form__btn form__btn">
+                      Subscribe Now
+                    </button>
+                  </div>
+
+                  <div class="subscribe-form__message">
+                    <p class="subscribe-form__thank">Thanks for submitting!</p>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
