@@ -727,6 +727,8 @@ a {
   .contact-form__input {
     height: 33px;
     margin-top: 6px; }
+    .contact-form__input.invalid {
+      border: 3px solid #ff4040; }
   .contact-form__textarea {
     height: 126px;
     font-size: 14px;
@@ -739,6 +741,8 @@ a {
     color: #303131;
     background-color: #f0f3f6;
     outline: none; }
+    .contact-form__textarea.invalid {
+      border: 3px solid #ff4040; }
     .contact-form__textarea::placeholder {
       font-weight: 300; }
     .contact-form__textarea:hover {
@@ -754,7 +758,10 @@ a {
     width: 235px;
     margin-top: 6px;
     pointer-events: none;
-    align-self: flex-end; }
+    align-self: flex-end;
+    visibility: hidden; }
+    .contact-form__message.visible {
+      visibility: visible; }
   .contact-form__thank {
     text-align: right; }
 
@@ -804,12 +811,17 @@ a {
   .subscribe-form__input {
     width: 238px;
     height: 33px; }
+    .subscribe-form__input.invalid {
+      border: 3px solid #ff4040; }
   .subscribe-form__btn {
     width: 133px;
     height: 33px;
     margin-left: 8px; }
   .subscribe-form__message {
-    margin-top: 5px; }
+    margin-top: 5px;
+    visibility: hidden; }
+    .subscribe-form__message.visible {
+      visibility: visible; }
 
 
 /*# sourceMappingURL=main.css.map*/

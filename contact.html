@@ -95,7 +95,7 @@
                     type="text"
                     id="name"
                     placeholder="Name"
-                    class="contact-form__input form__input"
+                    class="contact-form__input form__input field-validation"
                   />
 
                   <label for="email" class="contact-form__label form__label"
@@ -105,7 +105,8 @@
                     type="email"
                     id="email"
                     placeholder="Email"
-                    class="contact-form__input form__input"
+                    value=""
+                    class="contact-form__input form__input mail-validation field-validation"
                   />
 
                   <label for="subject" class="contact-form__label form__label"
@@ -115,7 +116,7 @@
                     type="text"
                     id="subject"
                     placeholder="Subject"
-                    class="contact-form__input form__input"
+                    class="contact-form__input form__input field-validation"
                   />
 
                   <label for="message" class="contact-form__label form__label"
@@ -125,10 +126,10 @@
                     name="message"
                     id="message"
                     placeholder="Message"
-                    class="contact-form__textarea"
+                    class="contact-form__textarea field-validation"
                   ></textarea>
 
-                  <button type="submit" class="contact-form__btn form__btn">
+                  <button type="button" class="contact-form__btn form__btn">
                     Submit
                   </button>
 
@@ -156,7 +157,7 @@
                       class="subscribe-form__input form__input"
                     />
 
-                    <button class="subscribe-form__btn form__btn">
+                    <button type="button" class="subscribe-form__btn form__btn">
                       Subscribe Now
                     </button>
                   </div>

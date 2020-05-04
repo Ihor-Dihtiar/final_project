@@ -56,6 +56,9 @@
   &__input {
     height: 33px;
     margin-top: 6px;
+    &.invalid {
+      border: 3px solid #ff4040;
+    }
   }
   &__textarea {
     height: 126px;
@@ -69,6 +72,9 @@
     color: $main-text-color;
     background-color: #f0f3f6;
     outline: none;
+    &.invalid {
+      border: 3px solid #ff4040;
+    }
     &::placeholder {
       font-weight: 300;
     }
@@ -90,7 +96,10 @@
     margin-top: 6px;
     pointer-events: none;
     align-self: flex-end;
-    // visibility: hidden;
+    visibility: hidden;
+    &.visible {
+      visibility: visible;
+    }
   }
   &__thank {
     text-align: right;
@@ -152,6 +161,9 @@
   &__input {
     width: 238px;
     height: 33px;
+    &.invalid {
+      border: 3px solid #ff4040;
+    }
   }
   &__btn {
     width: 133px;
@@ -160,5 +172,9 @@
   }
   &__message {
     margin-top: 5px;
+    visibility: hidden;
+    &.visible {
+      visibility: visible;
+    }
   }
 }

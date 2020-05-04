@@ -3,10 +3,11 @@ const btn = document.querySelector('.input-block__btn');
 const animationFields = document.querySelectorAll('.input-animation');
 const input = document.querySelector('.input-block__input');
 
-dandruff.addEventListener('click', addClassOpen);
-
-btn.addEventListener('click', removeClassOpen);
-btn.addEventListener('click', clearInput);
+if (dandruff) {
+  dandruff.addEventListener('click', addClassOpen);
+  btn.addEventListener('click', removeClassOpen);
+  btn.addEventListener('click', clearInput);
+}
 
 function addClassOpen() {
   animationFields.forEach((element) => {
