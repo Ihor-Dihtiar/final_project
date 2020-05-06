@@ -80,7 +80,6 @@ a {
   text-transform: uppercase; }
 
 .nav-up__list {
-  height: 100%;
   width: 100%;
   display: flex; }
 
@@ -188,6 +187,61 @@ a {
     .common-title__title_contact {
       text-align: left;
       line-height: 1; }
+
+@media (max-width: 415px) {
+  .page__header {
+    height: 95px;
+    padding: 0 20px;
+    position: initial; }
+  .page__content {
+    width: 100%;
+    margin-top: 0; }
+  .header__signature {
+    height: 50px;
+    margin: 28px 0px 16px 0;
+    display: flex;
+    align-items: center; }
+  .header__nav-up {
+    display: none;
+    width: 70%;
+    margin: 0;
+    z-index: 1;
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0; }
+  .nav-up__list {
+    flex-direction: column;
+    margin-top: 100px; }
+  .nav-up__item {
+    width: 188px;
+    margin-left: 40px; }
+  .nav-up__link {
+    line-height: 56px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400; }
+  .footer {
+    padding: 50px 0 25px; }
+    .footer__social-bar {
+      width: 168px;
+      height: 24px;
+      margin: 0 auto; }
+    .footer__copyright {
+      width: auto; }
+  .common-title__title_contact {
+    font-size: 30px; }
+  .social-bar {
+    width: auto;
+    height: auto; }
+    .social-bar__item {
+      width: 28px;
+      height: 28px;
+      margin-right: 18px; }
+  .copyright__note {
+    width: 245px;
+    margin: 0 auto; } }
 
 .content__inscription-block {
   width: 100%;
@@ -822,6 +876,39 @@ a {
     visibility: hidden; }
     .subscribe-form__message.visible {
       visibility: visible; }
+
+@media (max-width: 415px) {
+  .content__contact {
+    min-width: auto; }
+  .contact {
+    flex-wrap: wrap; }
+    .contact__img-block {
+      min-width: auto; }
+    .contact__img {
+      height: 310px; }
+  .info-block {
+    padding: 0 20px; }
+    .info-block__description {
+      width: auto;
+      margin-left: 0;
+      margin-top: 56px; }
+    .info-block__text {
+      width: 330px;
+      margin-top: 15px; }
+      .info-block__text_tel {
+        width: 180px; }
+  .contact-form {
+    margin-top: 15px; }
+    .contact-form__btn {
+      width: 77px;
+      height: 25px; }
+  .subscribe-form__input-btn {
+    display: initial; }
+  .subscribe-form__input {
+    width: 100%; }
+  .subscribe-form__btn {
+    width: 100%;
+    margin: 5px 0 0; } }
 
 
 /*# sourceMappingURL=main.css.map*/

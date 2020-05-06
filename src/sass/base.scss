@@ -101,7 +101,6 @@ a {
 
 .nav-up {
   &__list {
-    height: 100%;
     width: 100%;
     display: flex;
   }
@@ -233,6 +232,99 @@ a {
     &_contact {
       text-align: left;
       line-height: 1;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .page {
+    &__header {
+      height: 95px;
+      padding: 0 20px;
+      position: initial;
+    }
+    &__content {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  .header {
+    &__signature {
+      height: 50px;
+      margin: 28px 0px 16px 0;
+      display: flex;
+      align-items: center;
+    }
+    &__nav-up {
+      display: none;
+      width: 70%;
+      margin: 0;
+      z-index: 1;
+      background-color: #fff;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .nav-up {
+    &__list {
+      flex-direction: column;
+      margin-top: 100px;
+    }
+    &__item {
+      width: 188px;
+      margin-left: 40px;
+    }
+    &__link {
+      line-height: 56px;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .footer {
+    ////////////////////////
+
+    padding: 50px 0 25px;
+    &__social-bar {
+      width: 168px;
+      height: 24px;
+      margin: 0 auto;
+    }
+
+    ////////////////////////
+
+    &__copyright {
+      width: auto;
+    }
+  }
+
+  .common-title {
+    &__title {
+      &_contact {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .social-bar {
+    width: auto;
+    height: auto;
+    &__item {
+      width: 28px;
+      height: 28px;
+      margin-right: 18px;
+    }
+  }
+
+  .copyright {
+    &__note {
+      width: 245px;
+      margin: 0 auto;
     }
   }
 }

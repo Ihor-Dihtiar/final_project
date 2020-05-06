@@ -97,6 +97,45 @@
 
 /***/ }),
 
+/***/ "./src/scripts/blog.js":
+/*!*****************************!*\
+  !*** ./src/scripts/blog.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var dandruff = document.querySelector('.input-block__dandruff');
+var btn = document.querySelector('.input-block__btn');
+var animationFields = document.querySelectorAll('.input-animation');
+var input = document.querySelector('.input-block__input');
+
+if (dandruff) {
+  dandruff.addEventListener('click', addClassOpen);
+  btn.addEventListener('click', removeClassOpen);
+  btn.addEventListener('click', clearInput);
+}
+
+function addClassOpen() {
+  animationFields.forEach(function (element) {
+    element.classList.add('open');
+  });
+}
+
+function removeClassOpen() {
+  animationFields.forEach(function (element) {
+    element.classList.remove('open');
+  });
+}
+
+function clearInput() {
+  input.value = '';
+}
+
+/***/ }),
+
 /***/ "./src/scripts/contact-form.js":
 /*!*************************************!*\
   !*** ./src/scripts/contact-form.js ***!
@@ -180,7 +219,7 @@ if (submitButton) {
 "use strict";
 
 
-__webpack_require__(/*! ./input-field.js */ "./src/scripts/input-field.js");
+__webpack_require__(/*! ./blog.js */ "./src/scripts/blog.js");
 
 __webpack_require__(/*! ./like.js */ "./src/scripts/like.js");
 
@@ -189,45 +228,6 @@ __webpack_require__(/*! ./contact-form.js */ "./src/scripts/contact-form.js");
 __webpack_require__(/*! ./subscribe-form.js */ "./src/scripts/subscribe-form.js");
 
 __webpack_require__(/*! ../sass/index.scss */ "./src/sass/index.scss");
-
-/***/ }),
-
-/***/ "./src/scripts/input-field.js":
-/*!************************************!*\
-  !*** ./src/scripts/input-field.js ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var dandruff = document.querySelector('.input-block__dandruff');
-var btn = document.querySelector('.input-block__btn');
-var animationFields = document.querySelectorAll('.input-animation');
-var input = document.querySelector('.input-block__input');
-
-if (dandruff) {
-  dandruff.addEventListener('click', addClassOpen);
-  btn.addEventListener('click', removeClassOpen);
-  btn.addEventListener('click', clearInput);
-}
-
-function addClassOpen() {
-  animationFields.forEach(function (element) {
-    element.classList.add('open');
-  });
-}
-
-function removeClassOpen() {
-  animationFields.forEach(function (element) {
-    element.classList.remove('open');
-  });
-}
-
-function clearInput() {
-  input.value = '';
-}
 
 /***/ }),
 
