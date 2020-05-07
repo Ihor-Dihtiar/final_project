@@ -5,9 +5,12 @@ const line3 = document.querySelector('.menu-toggle__line_3');
 const headerBackground = document.querySelector('.header__background');
 const headerNav = document.querySelector('.header__nav-up');
 
-console.log(headerNav);
-
-menuToggle.addEventListener('click', toggleMenu);
+if (menuToggle) {
+  menuToggle.addEventListener('click', toggleMenu);
+}
+if (headerBackground) {
+  headerBackground.addEventListener('click', closeMenu);
+}
 
 function toggleMenu() {
   menuToggle.classList.toggle('menu-active');
@@ -16,4 +19,13 @@ function toggleMenu() {
   line3.classList.toggle('menu-active');
   headerBackground.classList.toggle('menu-active');
   headerNav.classList.toggle('menu-active');
+}
+
+function closeMenu() {
+  menuToggle.classList.remove('menu-active');
+  line1.classList.remove('menu-active');
+  line2.classList.remove('menu-active');
+  line3.classList.remove('menu-active');
+  headerBackground.classList.remove('menu-active');
+  headerNav.classList.remove('menu-active');
 }

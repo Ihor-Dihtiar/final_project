@@ -262,6 +262,7 @@ a {
       height: 50px;
       margin-top: 28px;
       z-index: 2;
+      cursor: pointer;
       &.menu-active {
         position: fixed;
         top: 0;
