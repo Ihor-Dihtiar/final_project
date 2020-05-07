@@ -49,6 +49,7 @@ a {
   }
   &__header {
     width: 100%;
+    max-width: 1920px;
     height: 103px;
     margin: 0 auto;
     position: fixed;
@@ -241,7 +242,7 @@ a {
     &__header {
       height: 95px;
       padding: 0 20px;
-      position: initial;
+      position: relative;
     }
     &__content {
       width: 100%;
@@ -256,8 +257,35 @@ a {
       display: flex;
       align-items: center;
     }
+    &__menu-toggle {
+      width: 50px;
+      height: 50px;
+      margin-top: 28px;
+      z-index: 2;
+      &.menu-active {
+        position: fixed;
+        top: 0;
+        right: 20px;
+      }
+    }
+    &__background {
+      pointer-events: none;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      background-color: #303131;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+      &.menu-active {
+        opacity: 0.6;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
     &__nav-up {
-      display: none;
       width: 70%;
       margin: 0;
       z-index: 1;
@@ -266,6 +294,55 @@ a {
       position: fixed;
       top: 0;
       right: 0;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+      &.menu-active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+      width: 22px;
+      height: 20px;
+      position: relative;
+    }
+    &__line {
+      background-color: rgba(48, 49, 49, 1);
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      &_1 {
+        &.menu-active {
+          transform: translateY(10px) translateY(-50%) rotate(-45deg);
+        }
+      }
+      &_2 {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        &.menu-active {
+          opacity: 0;
+        }
+      }
+      &_3 {
+        bottom: 0;
+        &.menu-active {
+          transform: translateY(-10px) translateY(50%) rotate(45deg);
+        }
+      }
     }
   }
 

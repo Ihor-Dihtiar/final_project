@@ -1,5 +1,5 @@
-@import "./mixins";
-@import "./variables";
+@import './mixins';
+@import './variables';
 
 .content {
   &__books {
@@ -15,6 +15,7 @@
     margin-top: 15px;
     background-color: #f0f3f6;
     position: relative;
+    overflow: hidden;
     &:nth-child(2) {
       margin-top: 0;
     }
@@ -33,7 +34,7 @@
     justify-content: center;
   }
   &__title {
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     font-size: 4rem;
     font-weight: normal;
     line-height: 4.4rem;
@@ -53,13 +54,13 @@
     align-items: center;
   }
   &__price {
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     font-size: 4rem;
     letter-spacing: 0.1em;
     color: #141d27;
   }
   &__currency {
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.5rem;
     color: #141d27;
     position: absolute;
