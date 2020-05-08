@@ -292,6 +292,7 @@ function toggleMenu() {
   line3.classList.toggle('menu-active');
   headerBackground.classList.toggle('menu-active');
   headerNav.classList.toggle('menu-active');
+  document.body.classList.toggle('menu-active');
 }
 
 function closeMenu() {
@@ -301,6 +302,7 @@ function closeMenu() {
   line3.classList.remove('menu-active');
   headerBackground.classList.remove('menu-active');
   headerNav.classList.remove('menu-active');
+  document.body.classList.remove('menu-active');
 }
 
 /***/ }),

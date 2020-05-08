@@ -139,7 +139,7 @@ a {
     height: 24px;
     margin: 0 auto; }
   .footer__copyright {
-    width: 740px;
+    width: 100%;
     margin: 15px auto 0; }
 
 .social-bar__list {
@@ -190,6 +190,8 @@ a {
       line-height: 1; }
 
 @media (max-width: 415px) {
+  body.menu-active {
+    overflow: hidden; }
   .page__header {
     height: 95px;
     padding: 0 20px;

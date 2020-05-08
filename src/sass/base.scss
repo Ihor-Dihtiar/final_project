@@ -175,7 +175,7 @@ a {
     margin: 0 auto;
   }
   &__copyright {
-    width: 740px;
+    width: 100%;
     margin: 15px auto 0;
   }
 }
@@ -238,6 +238,12 @@ a {
 }
 
 @media (max-width: 415px) {
+  body {
+    &.menu-active {
+      overflow: hidden;
+    }
+  }
+
   .page {
     &__header {
       height: 95px;
