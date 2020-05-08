@@ -71,11 +71,13 @@
         <main class="page__content content">
           <div class="content__contact contact">
             <div class="contact__img-block">
-              <img
-                src="./src/img/contact.png"
-                alt="Contact"
-                class="contact__img"
-              />
+              <picture>
+                <source
+                  media="(max-width: 415px)"
+                  srcset="./src/img/mobile-contact.png"
+                />
+                <img src="./src/img/contact.png" class="contact__img" />
+              </picture>
             </div>
 
             <div class="contact__info-block info-block">
@@ -245,6 +247,7 @@
         </footer>
       </div>
     </div>
-    <script type="module" src="./build/bundle.js"></script>
+
+    <script src="./build/bundle.js"></script>
   </body>
 </html>
