@@ -378,6 +378,10 @@ a {
     }
   }
 
+  .view-button {
+    height: 45px;
+  }
+
   .footer {
     &__copyright {
       width: auto;
@@ -385,7 +389,11 @@ a {
   }
 
   .common-title {
+    height: 74px;
     &__title {
+      font-size: 30px;
+      line-height: 1.2em;
+      letter-spacing: 0.05em;
       &_contact {
         font-size: 30px;
       }

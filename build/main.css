@@ -293,10 +293,18 @@ a {
     text-align: left;
     font-size: 18px;
     font-weight: 400; }
+  .view-button {
+    height: 45px; }
   .footer__copyright {
     width: auto; }
-  .common-title__title_contact {
-    font-size: 30px; }
+  .common-title {
+    height: 74px; }
+    .common-title__title {
+      font-size: 30px;
+      line-height: 1.2em;
+      letter-spacing: 0.05em; }
+      .common-title__title_contact {
+        font-size: 30px; }
   .social-bar {
     width: auto;
     height: auto; }
@@ -431,16 +439,18 @@ a {
     grid-template-columns: repeat(1, minmax(318px, 1fr));
     grid-row-gap: 15px;
     min-height: auto; }
-  .portfolio__img {
-    height: auto; }
   .portfolio__text-block {
     justify-content: center; }
   .portfolio__inscription {
-    margin-top: 0; } }
+    margin-top: 0;
+    font-size: 30px;
+    line-height: normal; }
+  .portfolio__view-button {
+    margin-top: 13px;
+    width: 120px; } }
 
 .content__about {
   width: 100%;
-  min-width: 980px;
   height: 884px; }
 
 .about {
@@ -476,11 +486,8 @@ a {
     margin-top: 156px;
     margin-bottom: 27px; }
   .right-block__paragraph {
-    font-family: "Nunito", sans-serif;
-    font-weight: 300;
     line-height: 1.5rem; }
   .right-block__subtitle {
-    font-family: "Nunito", sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.5rem; }
@@ -490,6 +497,30 @@ a {
     .right-block__subtitle_awards {
       margin-top: 59px;
       margin-bottom: 12px; }
+
+@media (max-width: 415px) {
+  .content__about {
+    display: initial;
+    height: auto; }
+  .right-block {
+    padding: 0 20px; }
+    .right-block__container {
+      width: 92%;
+      margin: 0;
+      position: initial;
+      padding-top: 50px;
+      padding-bottom: 64px; }
+    .right-block__title {
+      margin: 0 0 14px;
+      font-size: 30px;
+      line-height: 1.2em;
+      letter-spacing: 0.05em; }
+    .right-block__subtitle_education {
+      margin-top: 33px;
+      margin-bottom: 10px; }
+    .right-block__subtitle_awards {
+      margin-top: 51px;
+      margin-bottom: 9px; } }
 
 .content__books {
   width: 100%;
@@ -523,8 +554,6 @@ a {
   color: #141d27; }
 
 .goods__description {
-  font-family: "Nunito", sans-serif;
-  font-weight: 300;
   width: 355px;
   margin-top: 20px;
   line-height: 1.5rem; }

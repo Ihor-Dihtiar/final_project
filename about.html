@@ -12,7 +12,10 @@
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/css/index.css" />
+
+    <!-- <link rel="stylesheet" href="./src/css/index.css" /> -->
+
+    <link rel="stylesheet" href="./build/main.css" />
   </head>
   <body>
     <div class="page">
@@ -21,6 +24,16 @@
           <div class="header__signature signature">
             <a href="./index.html" class="signature__link">J.ALISSA</a>
           </div>
+
+          <div class="header__menu-toggle menu-toggle">
+            <div class="menu-toggle__wrapper">
+              <span class="menu-toggle__line menu-toggle__line_1"></span>
+              <span class="menu-toggle__line menu-toggle__line_2"></span>
+              <span class="menu-toggle__line menu-toggle__line_3"></span>
+            </div>
+          </div>
+
+          <div class="header__background"></div>
 
           <nav class="header__nav-up nav-up">
             <ul class="nav-up__list">
@@ -58,11 +71,13 @@
         <main class="page__content content">
           <div class="content__about about">
             <div class="about__left-block">
-              <img
-                class="about__img"
-                src="./src/img/about-jade.png"
-                alt="Jade"
-              />
+              <picture>
+                <source
+                  media="(max-width: 415px)"
+                  srcset="./src/img/about-jade-mobile.png"
+                />
+                <img src="./src/img/about-jade.png" class="about__img" />
+              </picture>
             </div>
 
             <div class="about__right-block right-block">
@@ -173,5 +188,7 @@
         </footer>
       </div>
     </div>
+
+    <script src="./build/bundle.js"></script>
   </body>
 </html>

@@ -22,10 +22,7 @@
     position: relative;
   }
   &__filter {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #273a4e;
+    @include filter;
   }
   &__img-block {
     width: 100%;
@@ -69,14 +66,18 @@
       grid-row-gap: 15px;
       min-height: auto;
     }
-    &__img {
-      height: auto;
-    }
+
     &__text-block {
       justify-content: center;
     }
     &__inscription {
       margin-top: 0;
+      font-size: 30px;
+      line-height: normal;
+    }
+    &__view-button {
+      margin-top: 13px;
+      width: 120px;
     }
   }
 }
