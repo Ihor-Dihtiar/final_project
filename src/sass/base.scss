@@ -50,6 +50,7 @@ a {
   &__header {
     width: 100%;
     max-width: 1920px;
+    min-width: 980px;
     height: 103px;
     margin: 0 auto;
     position: fixed;
@@ -58,12 +59,14 @@ a {
   }
   &__content {
     width: calc(100% - 160px);
+    min-width: 980px;
     height: auto;
     margin: 0 auto;
     margin-top: 103px;
   }
   &__footer {
     width: 100%;
+    min-width: 980px;
   }
 }
 
@@ -246,13 +249,18 @@ a {
 
   .page {
     &__header {
+      min-width: auto;
       height: 95px;
       padding: 0 20px;
       position: relative;
     }
     &__content {
       width: 100%;
+      min-width: auto;
       margin-top: 0;
+    }
+    .footer {
+      min-width: auto;
     }
   }
 
@@ -305,7 +313,6 @@ a {
       opacity: 0;
       visibility: hidden;
       transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
-
       &.menu-active {
         transform: translateX(0);
         opacity: 1;
@@ -372,17 +379,6 @@ a {
   }
 
   .footer {
-    ////////////////////////
-
-    padding: 50px 0 25px;
-    &__social-bar {
-      width: 168px;
-      height: 24px;
-      margin: 0 auto;
-    }
-
-    ////////////////////////
-
     &__copyright {
       width: auto;
     }
