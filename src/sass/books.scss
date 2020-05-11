@@ -4,7 +4,6 @@
 .content {
   &__books {
     width: 100%;
-    min-width: 980px;
   }
 }
 
@@ -83,5 +82,58 @@
     width: 600px;
     height: 438px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 415px) {
+  .books {
+    &__goods {
+      height: auto;
+      margin-top: 11px;
+    }
+  }
+
+  .goods {
+    &__container {
+      width: 85%;
+      position: initial;
+      margin: 0 0 0 20px;
+    }
+    &__title {
+      margin-top: 52px;
+      line-height: 1.1em;
+      font-size: 2.25rem;
+    }
+    &__description {
+      font-size: 16px;
+      width: 100%;
+    }
+    &__price-container {
+      margin-top: 22px;
+      height: 83px;
+    }
+    &__price {
+      font-size: 2.25rem;
+    }
+    &__currency {
+      left: 52px;
+      top: 10px;
+    }
+    &__view-button {
+      width: 140px;
+    }
+    &__img-block {
+      position: initial;
+      width: 100%;
+      height: auto;
+      margin: 0 0 40px 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__img {
+      width: 87%;
+      height: auto;
+      display: block;
+    }
   }
 }

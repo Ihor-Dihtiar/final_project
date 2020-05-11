@@ -523,8 +523,7 @@ a {
       margin-bottom: 9px; } }
 
 .content__books {
-  width: 100%;
-  min-width: 980px; }
+  width: 100%; }
 
 .books__goods {
   width: 100%;
@@ -596,6 +595,43 @@ a {
   width: 600px;
   height: 438px;
   object-fit: cover; }
+
+@media (max-width: 415px) {
+  .books__goods {
+    height: auto;
+    margin-top: 11px; }
+  .goods__container {
+    width: 85%;
+    position: initial;
+    margin: 0 0 0 20px; }
+  .goods__title {
+    margin-top: 52px;
+    line-height: 1.1em;
+    font-size: 2.25rem; }
+  .goods__description {
+    font-size: 16px;
+    width: 100%; }
+  .goods__price-container {
+    margin-top: 22px;
+    height: 83px; }
+  .goods__price {
+    font-size: 2.25rem; }
+  .goods__currency {
+    left: 52px;
+    top: 10px; }
+  .goods__view-button {
+    width: 140px; }
+  .goods__img-block {
+    position: initial;
+    width: 100%;
+    height: auto;
+    margin: 0 0 40px 0;
+    display: flex;
+    justify-content: flex-end; }
+  .goods__img {
+    width: 87%;
+    height: auto;
+    display: block; } }
 
 .content__blog {
   width: 100%;
