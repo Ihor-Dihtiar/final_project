@@ -936,7 +936,9 @@ a {
       height: auto; }
     .post__img {
       display: block;
-      width: 100%; }
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
     .post__img-link {
       top: 0; }
     .post__description {

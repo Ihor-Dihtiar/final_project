@@ -357,6 +357,8 @@
     }
     &__img {
       @include normalize-to-block;
+      height: 100%;
+      object-fit: cover;
     }
     &__img-link {
       top: 0;
