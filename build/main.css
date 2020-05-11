@@ -237,7 +237,7 @@ a {
       visibility: visible;
       pointer-events: auto; }
   .header__nav-up {
-    width: 70%;
+    width: 80%;
     margin: 0;
     z-index: 1;
     background-color: #fff;
@@ -916,13 +916,15 @@ a {
 @media (max-width: 415px) {
   .blog__search {
     background-color: #273a4e; }
-  .search__all-posts {
-    display: none; }
-  .search__blog {
-    display: initial;
-    color: #fff;
-    font-weight: normal;
-    font-size: 1.25rem; }
+  .search {
+    height: 50px; }
+    .search__all-posts {
+      display: none; }
+    .search__blog {
+      display: initial;
+      color: #fff;
+      font-weight: normal;
+      font-size: 0.88rem; }
   .post {
     padding: 0; }
     .post__wrapper {
