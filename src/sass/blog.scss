@@ -1,10 +1,9 @@
-@import "./mixins";
-@import "./variables";
+@import './mixins';
+@import './variables';
 
 .content {
   &__blog {
     width: 100%;
-    min-width: 980px;
   }
 }
 
@@ -33,6 +32,9 @@
 .search {
   &__all-posts {
     color: #141d27;
+  }
+  &__blog {
+    display: none;
   }
   &__input-block {
     margin-right: 16px;
@@ -133,24 +135,6 @@
     flex-shrink: 0;
     flex-basis: 50%;
     position: relative;
-    &_holiday {
-      background: url("../img/blog-holiday.png") 50% / cover no-repeat;
-    }
-    &_backdrops {
-      background: url("../img/blog-backdrops.png") 50% / cover no-repeat;
-    }
-    &_drip {
-      background: url("../img/blog-drip.png") 50% / cover no-repeat;
-    }
-    &_styling {
-      background: url("../img/blog-styling.png") 50% / cover no-repeat;
-    }
-    &_sizzle {
-      background: url("../img/blog-sizzle.png") 50% / cover no-repeat;
-    }
-    &_eating {
-      background: url("../img/blog-eating.png") 50% / cover no-repeat;
-    }
   }
   &__img-link {
     position: absolute;
@@ -188,7 +172,7 @@
   &__icon {
     width: 32px;
     height: 32px;
-    background: url("../img/blog-icon-i.png") 50% / cover no-repeat;
+    background: url('../img/blog-icon-i.png') 50% / cover no-repeat;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -259,7 +243,7 @@
 .publication-text {
   margin-top: 18px;
   &__header {
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     font-size: 28px;
     color: $main-text-color;
     font-weight: normal;
@@ -300,6 +284,12 @@
     white-space: nowrap;
     opacity: 0.9;
   }
+  &__views-icon {
+    display: none;
+  }
+  &__views {
+    margin-left: 6px;
+  }
   &__comments {
     margin-left: 16px;
     color: $main-text-color;
@@ -330,6 +320,82 @@
     transition: fill 0.3s ease;
     &.like {
       fill: #e84a43;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .blog {
+    &__search {
+      background-color: #273a4e;
+    }
+  }
+
+  .search {
+    &__all-posts {
+      display: none;
+    }
+    &__blog {
+      display: initial;
+      color: #fff;
+      font-weight: normal;
+      font-size: 1.25rem;
+    }
+  }
+
+  .post {
+    padding: 0;
+    &__wrapper {
+      display: initial;
+      height: auto;
+      width: 100%;
+    }
+    &__img-block {
+      width: 100%;
+      height: auto;
+    }
+    &__img {
+      @include normalize-to-block;
+    }
+    &__img-link {
+      top: 0;
+    }
+    &__description {
+      padding: 30px 20px;
+    }
+    &__header-and-text {
+      padding-bottom: 18px;
+    }
+  }
+
+  .publication-text {
+    &__header {
+      line-height: 1.4em;
+    }
+  }
+
+  .publication-footer {
+    display: flex;
+    flex-wrap: wrap;
+    &__line {
+      order: 1;
+      margin: 18px 0 0 0;
+    }
+    &__activity {
+      width: 100%;
+    }
+    &__views-icon {
+      display: initial;
+      height: 100%;
+    }
+    &__views-svg {
+      fill: #303131;
+    }
+    &__views-count {
+      margin-left: 6px;
+    }
+    &__views {
+      display: none;
     }
   }
 }

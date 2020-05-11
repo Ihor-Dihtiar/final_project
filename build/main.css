@@ -608,6 +608,10 @@ a {
     margin-top: 52px;
     line-height: 1.1em;
     font-size: 2.25rem; }
+    .goods__title_sugar {
+      width: 155px; }
+    .goods__title_holiday {
+      width: 231px; }
   .goods__description {
     font-size: 16px;
     width: 100%; }
@@ -634,8 +638,7 @@ a {
     display: block; } }
 
 .content__blog {
-  width: 100%;
-  min-width: 980px; }
+  width: 100%; }
 
 .blog__container {
   width: 100%;
@@ -658,6 +661,9 @@ a {
 
 .search__all-posts {
   color: #141d27; }
+
+.search__blog {
+  display: none; }
 
 .search__input-block {
   margin-right: 16px;
@@ -746,18 +752,6 @@ a {
     flex-shrink: 0;
     flex-basis: 50%;
     position: relative; }
-    .post__img-block_holiday {
-      background: url(src/img/blog-holiday.png) 50%/cover no-repeat; }
-    .post__img-block_backdrops {
-      background: url(src/img/blog-backdrops.png) 50%/cover no-repeat; }
-    .post__img-block_drip {
-      background: url(src/img/blog-drip.png) 50%/cover no-repeat; }
-    .post__img-block_styling {
-      background: url(src/img/blog-styling.png) 50%/cover no-repeat; }
-    .post__img-block_sizzle {
-      background: url(src/img/blog-sizzle.png) 50%/cover no-repeat; }
-    .post__img-block_eating {
-      background: url(src/img/blog-eating.png) 50%/cover no-repeat; }
   .post__img-link {
     position: absolute;
     width: 100%;
@@ -846,7 +840,7 @@ a {
 .publication-text {
   margin-top: 18px; }
   .publication-text__header {
-    font-family: "Cinzel", serif;
+    font-family: 'Cinzel', serif;
     font-size: 28px;
     color: #303131;
     font-weight: normal;
@@ -883,6 +877,12 @@ a {
   white-space: nowrap;
   opacity: 0.9; }
 
+.publication-footer__views-icon {
+  display: none; }
+
+.publication-footer__views {
+  margin-left: 6px; }
+
 .publication-footer__comments {
   margin-left: 16px;
   color: #303131; }
@@ -912,6 +912,54 @@ a {
   transition: fill 0.3s ease; }
   .publication-footer__svg.like {
     fill: #e84a43; }
+
+@media (max-width: 415px) {
+  .blog__search {
+    background-color: #273a4e; }
+  .search__all-posts {
+    display: none; }
+  .search__blog {
+    display: initial;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.25rem; }
+  .post {
+    padding: 0; }
+    .post__wrapper {
+      display: initial;
+      height: auto;
+      width: 100%; }
+    .post__img-block {
+      width: 100%;
+      height: auto; }
+    .post__img {
+      display: block;
+      width: 100%; }
+    .post__img-link {
+      top: 0; }
+    .post__description {
+      padding: 30px 20px; }
+    .post__header-and-text {
+      padding-bottom: 18px; }
+  .publication-text__header {
+    line-height: 1.4em; }
+  .publication-footer {
+    display: flex;
+    flex-wrap: wrap; }
+    .publication-footer__line {
+      order: 1;
+      margin: 18px 0 0 0; }
+    .publication-footer__activity {
+      width: 100%; }
+    .publication-footer__views-icon {
+      display: initial;
+      height: 100%; }
+    .publication-footer__views-svg {
+      fill: #303131; }
+    .publication-footer__views-count {
+      margin-left: 6px; }
+    .publication-footer__views {
+      display: none; } }
 
 .content__contact {
   width: 100%;
