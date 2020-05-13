@@ -59,20 +59,25 @@
     &__inscription-block {
       min-width: auto;
       min-height: auto;
-      height: 570px;
+      height: 441px;
     }
   }
 
   .inscription-block {
+    &__text-block {
+      justify-content: initial;
+    }
     &__title {
       font-size: 34px;
       width: 230px;
       letter-spacing: 0.2rem;
       text-align: center;
+      margin-top: 113px;
     }
     &__subtitle {
       font-size: 14px;
       margin-top: 8px;
+      letter-spacing: 0.55em;
     }
     &__view-button {
       height: 45px;

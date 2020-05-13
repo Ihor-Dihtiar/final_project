@@ -68,7 +68,6 @@
     padding: 0.75em 10px 3px 12px;
     border: 1px solid rgba(48, 49, 49, 0.55);
     resize: none;
-    font-family: 'Nunito', sans-serif;
     color: $main-text-color;
     background-color: #f0f3f6;
     outline: none;
@@ -76,7 +75,7 @@
       border: 3px solid #ff4040;
     }
     &::placeholder {
-      font-weight: 300;
+      color: #8b98a7;
     }
     &:hover {
       border-width: 3px;
@@ -115,12 +114,11 @@
     font-size: 14px;
     line-height: 1.4em;
     border: 1px solid rgba(48, 49, 49, 0.55);
-    font-family: 'Nunito', sans-serif;
     color: $main-text-color;
     background-color: #f0f3f6;
     outline: none;
     &::placeholder {
-      font-weight: 300;
+      color: #8b98a7;
     }
     &:hover {
       border-width: 3px;
@@ -135,7 +133,6 @@
     cursor: pointer;
     outline: none;
     border: none;
-    font-family: 'Nunito', sans-serif;
     transition: background-color 0.4s ease 0s;
     &:hover {
       background-color: #5c6b7a;
@@ -204,10 +201,10 @@
       margin-top: 56px;
     }
     &__text {
-      width: 330px;
+      width: 243px;
       margin-top: 15px;
       &_tel {
-        width: 180px;
+        width: 175px;
       }
     }
   }

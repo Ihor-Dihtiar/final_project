@@ -1,5 +1,13 @@
 @import './mixins';
 @import './variables';
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Avenir'), url(../fonts/Avenir-Light.woff2),
+    url(../fonts/Avenir-Light.woff), url(../fonts/Avenir-Light.ttf),
+    url(../fonts/Avenir-Light.eot);
+}
 
 * {
   box-sizing: border-box;
@@ -7,8 +15,8 @@
 
 html {
   font-size: 16px;
-  font-family: 'Nunito', sans-serif, Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: 'Avenir', sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 400;
   color: #303131;
 }
 
@@ -321,6 +329,12 @@ a {
     }
   }
 
+  .signature {
+    &__link {
+      font-size: 23px;
+    }
+  }
+
   .menu-toggle {
     display: flex;
     justify-content: center;
@@ -383,6 +397,7 @@ a {
   }
 
   .footer {
+    padding-top: 37px;
     &__copyright {
       width: auto;
     }
