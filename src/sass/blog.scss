@@ -31,7 +31,7 @@
 
 .search {
   &__all-posts {
-    color: #141d27;
+    color: $second-text-color;
   }
   &__blog {
     display: none;
@@ -332,6 +332,9 @@
     &__search {
       background-color: #273a4e;
     }
+    &__posts :last-of-type .post__description {
+      padding-bottom: 0;
+    }
   }
 
   .search {
@@ -422,9 +425,5 @@
     &__views {
       display: none;
     }
-  }
-
-  .blog__posts :last-of-type .post__wrapper .post__description {
-    padding-bottom: 0;
   }
 }

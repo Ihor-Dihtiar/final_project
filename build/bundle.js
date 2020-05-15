@@ -136,6 +136,41 @@ function clearInput() {
 
 /***/ }),
 
+/***/ "./src/scripts/button-to-up.js":
+/*!*************************************!*\
+  !*** ./src/scripts/button-to-up.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var divArrowUp = document.querySelector('.arrow-up');
+var arrowUpButton = document.querySelector('.arrow-up__btn');
+arrowUpButton.addEventListener('click', function () {
+  window.scrollTo(pageXOffset, 0);
+});
+
+if (window.innerWidth < 415) {
+  var arrow = function arrow() {
+    if (pageYOffset < document.documentElement.clientHeight) {
+      divArrowUp.classList.add('arrow-up_hidden');
+    } else {
+      divArrowUp.classList.remove('arrow-up_hidden');
+      window.removeEventListener('scroll', arrow);
+      setTimeout(function () {
+        divArrowUp.classList.add('arrow-up_hidden');
+        window.addEventListener('scroll', arrow);
+      }, 4000);
+    }
+  };
+
+  window.addEventListener('scroll', arrow);
+}
+
+/***/ }),
+
 /***/ "./src/scripts/contact-form.js":
 /*!*************************************!*\
   !*** ./src/scripts/contact-form.js ***!
@@ -229,6 +264,8 @@ __webpack_require__(/*! ./subscribe-form.js */ "./src/scripts/subscribe-form.js"
 
 __webpack_require__(/*! ./mobile-menu.js */ "./src/scripts/mobile-menu.js");
 
+__webpack_require__(/*! ./button-to-up.js */ "./src/scripts/button-to-up.js");
+
 __webpack_require__(/*! ../sass/index.scss */ "./src/sass/index.scss");
 
 /***/ }),
@@ -276,6 +313,7 @@ var line2 = document.querySelector('.menu-toggle__line_2');
 var line3 = document.querySelector('.menu-toggle__line_3');
 var headerBackground = document.querySelector('.header__background');
 var headerNav = document.querySelector('.header__nav-up');
+var divArrowUp = document.querySelector('.arrow-up');
 
 if (menuToggle) {
   menuToggle.addEventListener('click', toggleMenu);
@@ -293,6 +331,7 @@ function toggleMenu() {
   headerBackground.classList.toggle('menu-active');
   headerNav.classList.toggle('menu-active');
   document.body.classList.toggle('menu-active');
+  divArrowUp.classList.toggle('arrow-up_display-none');
 }
 
 function closeMenu() {
@@ -303,6 +342,7 @@ function closeMenu() {
   headerBackground.classList.remove('menu-active');
   headerNav.classList.remove('menu-active');
   document.body.classList.remove('menu-active');
+  divArrowUp.classList.remove('arrow-up_display-none');
 }
 
 /***/ }),

@@ -4,6 +4,7 @@ const line2 = document.querySelector('.menu-toggle__line_2');
 const line3 = document.querySelector('.menu-toggle__line_3');
 const headerBackground = document.querySelector('.header__background');
 const headerNav = document.querySelector('.header__nav-up');
+const divArrowUp = document.querySelector('.arrow-up');
 
 if (menuToggle) {
   menuToggle.addEventListener('click', toggleMenu);
@@ -20,6 +21,7 @@ function toggleMenu() {
   headerBackground.classList.toggle('menu-active');
   headerNav.classList.toggle('menu-active');
   document.body.classList.toggle('menu-active');
+  divArrowUp.classList.toggle('arrow-up_display-none');
 }
 
 function closeMenu() {
@@ -30,4 +32,5 @@ function closeMenu() {
   headerBackground.classList.remove('menu-active');
   headerNav.classList.remove('menu-active');
   document.body.classList.remove('menu-active');
+  divArrowUp.classList.remove('arrow-up_display-none');
 }

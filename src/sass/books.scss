@@ -37,7 +37,7 @@
     font-size: 4rem;
     font-weight: normal;
     line-height: 4.4rem;
-    color: #141d27;
+    color: $second-text-color;
   }
   &__description {
     width: 355px;
@@ -55,12 +55,12 @@
     font-family: 'Cinzel', serif;
     font-size: 4rem;
     letter-spacing: 0.1em;
-    color: #141d27;
+    color: $second-text-color;
   }
   &__currency {
     font-family: 'Cinzel', serif;
     font-size: 1.5rem;
-    color: #141d27;
+    color: $second-text-color;
     position: absolute;
     top: 0;
     left: 85px;

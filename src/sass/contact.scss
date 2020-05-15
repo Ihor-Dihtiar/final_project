@@ -4,7 +4,6 @@
 .content {
   &__contact {
     width: 100%;
-    min-width: 980px;
   }
 }
 
@@ -75,7 +74,7 @@
       border: 3px solid #ff4040;
     }
     &::placeholder {
-      color: #8b98a7;
+      color: $active-link-color;
     }
     &:hover {
       border-width: 3px;
@@ -118,7 +117,7 @@
     background-color: #f0f3f6;
     outline: none;
     &::placeholder {
-      color: #8b98a7;
+      color: $active-link-color;
     }
     &:hover {
       border-width: 3px;

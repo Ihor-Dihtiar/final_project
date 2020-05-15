@@ -4,6 +4,9 @@
   font-weight: 400;
   src: local("Avenir"), url(fonts/Avenir-Light.woff2), url(fonts/Avenir-Light.woff), url(fonts/Avenir-Light.ttf), url(fonts/Avenir-Light.eot); }
 
+html {
+  scroll-behavior: smooth; }
+
 * {
   box-sizing: border-box; }
 
@@ -198,6 +201,11 @@ a {
       text-align: left;
       line-height: 1; }
 
+.arrow-up {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; }
+
 @media (max-width: 415px) {
   body.menu-active {
     overflow: hidden; }
@@ -247,7 +255,7 @@ a {
     margin: 0;
     z-index: 1;
     background-color: #fff;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     right: 0;
@@ -324,7 +332,39 @@ a {
       margin-right: 18px; }
   .copyright__note {
     width: 245px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .arrow-up {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    right: calc((100% - 320px) / 2);
+    margin-right: 20px;
+    touch-action: manipulation;
+    cursor: pointer;
+    z-index: 5;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.7s, visibility 0.7s; }
+    .arrow-up_hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none; }
+    .arrow-up_display-none {
+      display: none; }
+    .arrow-up__btn {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      background-color: #cec5aa; }
+    .arrow-up__img {
+      width: 100%;
+      height: 100%; } }
 
 .content__inscription-block {
   width: 100%;
@@ -935,6 +975,8 @@ a {
 @media (max-width: 415px) {
   .blog__search {
     background-color: #273a4e; }
+  .blog__posts :last-of-type .post__description {
+    padding-bottom: 0; }
   .search {
     height: 50px; }
     .search__all-posts {
@@ -990,13 +1032,10 @@ a {
     .publication-footer__views-count {
       margin-left: 6px; }
     .publication-footer__views {
-      display: none; }
-  .blog__posts :last-of-type .post__wrapper .post__description {
-    padding-bottom: 0; } }
+      display: none; } }
 
 .content__contact {
-  width: 100%;
-  min-width: 980px; }
+  width: 100%; }
 
 .contact {
   display: flex; }
