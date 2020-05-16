@@ -2,7 +2,7 @@
   font-family: 'Avenir';
   font-style: normal;
   font-weight: 400;
-  src: local("Avenir"), url(fonts/Avenir-Light.woff2), url(fonts/Avenir-Light.woff), url(fonts/Avenir-Light.ttf), url(fonts/Avenir-Light.eot); }
+  src: local("Avenir"), url(src/fonts/Avenir-Light.woff2), url(src/fonts/Avenir-Light.woff), url(src/fonts/Avenir-Light.ttf), url(src/fonts/Avenir-Light.eot); }
 
 html {
   scroll-behavior: smooth; }
