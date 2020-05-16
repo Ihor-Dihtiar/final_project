@@ -17,7 +17,7 @@ if (window.innerWidth < 415) {
       setTimeout(() => {
         divArrowUp.classList.add('arrow-up_hidden');
         window.addEventListener('scroll', arrow);
-      }, 4000);
+      }, 3000);
     }
   }
 }

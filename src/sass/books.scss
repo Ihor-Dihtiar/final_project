@@ -33,7 +33,7 @@
     justify-content: center;
   }
   &__title {
-    font-family: 'Cinzel', serif;
+    font-family: $cinzel-font;
     font-size: 4rem;
     font-weight: normal;
     line-height: 4.4rem;
@@ -52,13 +52,13 @@
     align-items: center;
   }
   &__price {
-    font-family: 'Cinzel', serif;
+    font-family: $cinzel-font;
     font-size: 4rem;
     letter-spacing: 0.1em;
     color: $second-text-color;
   }
   &__currency {
-    font-family: 'Cinzel', serif;
+    font-family: $cinzel-font;
     font-size: 1.5rem;
     color: $second-text-color;
     position: absolute;
