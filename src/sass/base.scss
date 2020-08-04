@@ -1,10 +1,10 @@
-@import './mixins';
-@import './variables';
+@import "./mixins";
+@import "./variables";
 @font-face {
-  font-family: 'Avenir';
+  font-family: "Avenir";
   font-style: normal;
   font-weight: 400;
-  src: local('Avenir'), url(../fonts/Avenir-Light.woff2),
+  src: local("Avenir"), url(../fonts/Avenir-Light.woff2),
     url(../fonts/Avenir-Light.woff), url(../fonts/Avenir-Light.ttf),
     url(../fonts/Avenir-Light.eot);
 }
@@ -19,7 +19,7 @@ html {
 
 html {
   font-size: 16px;
-  font-family: 'Avenir', sans-serif, Arial, Helvetica, sans-serif;
+  font-family: "Avenir", sans-serif, Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #303131;
 }
@@ -256,6 +256,7 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  display: none;
 }
 
 @media (max-width: 415px) {
@@ -443,6 +444,7 @@ a {
   }
 
   .arrow-up {
+    display: initial;
     position: fixed;
     width: 44px;
     height: 44px;

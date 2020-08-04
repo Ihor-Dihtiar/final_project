@@ -1,2 +1,409 @@
-!function(e){var t={};function n(i){if(t[i])return t[i].exports;var o=t[i]={i:i,l:!1,exports:{}};return e[i].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,i){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var i=Object.create(null);if(n.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(i,o,function(t){return e[t]}.bind(null,o));return i},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";n(1),n(2),n(3),n(4),n(5),n(6),n(7)},function(e,t,n){"use strict";var i=document.querySelector(".input-block__dandruff"),o=document.querySelector(".input-block__btn"),c=document.querySelectorAll(".input-animation"),s=document.querySelector(".input-block__input");i&&(i.addEventListener("click",(function(){c.forEach((function(e){e.classList.add("open")}))})),o.addEventListener("click",(function(){c.forEach((function(e){e.classList.remove("open")}))})),o.addEventListener("click",(function(){s.value=""})))},function(e,t,n){"use strict";for(var i=document.querySelectorAll(".publication-footer__like-btn"),o=document.querySelectorAll(".publication-footer__likes-count"),c=document.querySelectorAll(".publication-footer__svg"),s=function(e){i[e].addEventListener("click",(function(){c[e].classList.toggle("like"),o[e].classList.toggle("like")}))},r=0;r<i.length;r++)s(r)},function(e,t,n){"use strict";var i=document.querySelectorAll(".field-validation"),o=document.querySelector(".mail-validation"),c=document.querySelector(".contact-form__btn"),s=document.querySelector(".contact-form__message"),r=/^\w+@\w+\.\w{2,4}$/i;i.forEach((function(e){e.oninput=function(){e.classList.remove("invalid")},e.addEventListener("focusout",(function(){e.value||e.classList.add("invalid")}))})),o&&o.addEventListener("focusout",(function(){var e=o.value;o.oninput=function(){o.classList.remove("invalid")},r.test(e)?o.classList.remove("invalid"):o.classList.add("invalid")})),c&&c.addEventListener("click",(function(){var e=!0;i.forEach((function(t){t.value||t.classList.add("invalid"),t.classList.contains("invalid")&&(e=!1)})),e&&setTimeout((function(){i.forEach((function(e){e.value="",e.classList.remove("invalid"),s.classList.add("visible"),setTimeout((function(){s.classList.remove("visible")}),3e3)}))}),1e3)}))},function(e,t,n){"use strict";var i=document.querySelector(".subscribe-form__input"),o=document.querySelector(".subscribe-form__btn"),c=document.querySelector(".subscribe-form__message"),s=/^\w+@\w+\.\w{2,4}$/i;i&&(i.oninput=function(){i.classList.remove("invalid")},i.addEventListener("focusout",(function(){var e=i.value;s.test(e)?i.classList.remove("invalid"):i.classList.add("invalid")}))),o&&o.addEventListener("click",(function(){var e=!0;i.value||i.classList.add("invalid"),i.classList.contains("invalid")&&(e=!1),e&&setTimeout((function(){i.value="",i.classList.remove("invalid"),c.classList.add("visible"),setTimeout((function(){c.classList.remove("visible")}),3e3)}),1e3)}))},function(e,t,n){"use strict";var i=document.querySelector(".header__menu-toggle"),o=document.querySelector(".menu-toggle__line_1"),c=document.querySelector(".menu-toggle__line_2"),s=document.querySelector(".menu-toggle__line_3"),r=document.querySelector(".header__background"),u=document.querySelector(".header__nav-up"),l=document.querySelector(".arrow-up");i&&i.addEventListener("click",(function(){i.classList.toggle("menu-active"),o.classList.toggle("menu-active"),c.classList.toggle("menu-active"),s.classList.toggle("menu-active"),r.classList.toggle("menu-active"),u.classList.toggle("menu-active"),document.body.classList.toggle("menu-active"),l.classList.toggle("arrow-up_display-none")})),r&&r.addEventListener("click",(function(){i.classList.remove("menu-active"),o.classList.remove("menu-active"),c.classList.remove("menu-active"),s.classList.remove("menu-active"),r.classList.remove("menu-active"),u.classList.remove("menu-active"),document.body.classList.remove("menu-active"),l.classList.remove("arrow-up_display-none")}))},function(e,t,n){"use strict";var i=document.querySelector(".arrow-up");if(document.querySelector(".arrow-up__btn").addEventListener("click",(function(){window.scrollTo(pageXOffset,0)})),window.innerWidth<415){window.addEventListener("scroll",(function e(){pageYOffset<document.documentElement.clientHeight?i.classList.add("arrow-up_hidden"):(i.classList.remove("arrow-up_hidden"),window.removeEventListener("scroll",e),setTimeout((function(){i.classList.add("arrow-up_hidden"),window.addEventListener("scroll",e)}),3e3))}))}},function(e,t,n){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/scripts/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/sass/index.scss":
+/*!*****************************!*\
+  !*** ./src/sass/index.scss ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/scripts/blog.js":
+/*!*****************************!*\
+  !*** ./src/scripts/blog.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var dandruff = document.querySelector('.input-block__dandruff');
+var btn = document.querySelector('.input-block__btn');
+var animationFields = document.querySelectorAll('.input-animation');
+var input = document.querySelector('.input-block__input');
+
+if (dandruff) {
+  dandruff.addEventListener('click', addClassOpen);
+  btn.addEventListener('click', removeClassOpen);
+  btn.addEventListener('click', clearInput);
+}
+
+function addClassOpen() {
+  animationFields.forEach(function (element) {
+    element.classList.add('open');
+  });
+}
+
+function removeClassOpen() {
+  animationFields.forEach(function (element) {
+    element.classList.remove('open');
+  });
+}
+
+function clearInput() {
+  input.value = '';
+}
+
+/***/ }),
+
+/***/ "./src/scripts/button-to-up.js":
+/*!*************************************!*\
+  !*** ./src/scripts/button-to-up.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var divArrowUp = document.querySelector('.arrow-up');
+var arrowUpButton = document.querySelector('.arrow-up__btn');
+arrowUpButton.addEventListener('click', function () {
+  window.scrollTo(pageXOffset, 0);
+});
+
+if (window.innerWidth < 415) {
+  var arrow = function arrow() {
+    if (pageYOffset < document.documentElement.clientHeight) {
+      divArrowUp.classList.add('arrow-up_hidden');
+    } else {
+      divArrowUp.classList.remove('arrow-up_hidden');
+      window.removeEventListener('scroll', arrow);
+      setTimeout(function () {
+        divArrowUp.classList.add('arrow-up_hidden');
+        window.addEventListener('scroll', arrow);
+      }, 3000);
+    }
+  };
+
+  window.addEventListener('scroll', arrow);
+}
+
+/***/ }),
+
+/***/ "./src/scripts/contact-form.js":
+/*!*************************************!*\
+  !*** ./src/scripts/contact-form.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var formInput = document.querySelectorAll('.field-validation');
+var email = document.querySelector('.mail-validation');
+var submitButton = document.querySelector('.contact-form__btn');
+var contactSuccess = document.querySelector('.contact-form__message');
+var reg = /^\w+@\w+\.\w{2,4}$/i;
+formInput.forEach(function (element) {
+  element.oninput = function () {
+    element.classList.remove('invalid');
+  };
+
+  element.addEventListener('focusout', function () {
+    if (!element.value) {
+      element.classList.add('invalid');
+    }
+  });
+});
+
+if (email) {
+  email.addEventListener('focusout', function () {
+    var emailValue = email.value;
+
+    email.oninput = function () {
+      email.classList.remove('invalid');
+    };
+
+    if (!reg.test(emailValue)) {
+      email.classList.add('invalid');
+    } else {
+      email.classList.remove('invalid');
+    }
+  });
+}
+
+if (submitButton) {
+  submitButton.addEventListener('click', function () {
+    var btnTriger = true;
+    formInput.forEach(function (element) {
+      if (!element.value) {
+        element.classList.add('invalid');
+      }
+
+      if (element.classList.contains('invalid')) {
+        btnTriger = false;
+      }
+    });
+
+    if (btnTriger) {
+      setTimeout(function () {
+        formInput.forEach(function (element) {
+          element.value = '';
+          element.classList.remove('invalid');
+          contactSuccess.classList.add('visible');
+          setTimeout(function () {
+            contactSuccess.classList.remove('visible');
+          }, 3000);
+        });
+      }, 1000);
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/index.js":
+/*!******************************!*\
+  !*** ./src/scripts/index.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ./blog.js */ "./src/scripts/blog.js");
+
+__webpack_require__(/*! ./like.js */ "./src/scripts/like.js");
+
+__webpack_require__(/*! ./contact-form.js */ "./src/scripts/contact-form.js");
+
+__webpack_require__(/*! ./subscribe-form.js */ "./src/scripts/subscribe-form.js");
+
+__webpack_require__(/*! ./mobile-menu.js */ "./src/scripts/mobile-menu.js");
+
+__webpack_require__(/*! ./button-to-up.js */ "./src/scripts/button-to-up.js");
+
+__webpack_require__(/*! ../sass/index.scss */ "./src/sass/index.scss");
+
+/***/ }),
+
+/***/ "./src/scripts/like.js":
+/*!*****************************!*\
+  !*** ./src/scripts/like.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var likeButton = document.querySelectorAll('.publication-footer__like-btn');
+var likesCount = document.querySelectorAll('.publication-footer__likes-count');
+var svgHeart = document.querySelectorAll('.publication-footer__svg');
+
+var _loop = function _loop(i) {
+  likeButton[i].addEventListener('click', function () {
+    svgHeart[i].classList.toggle('like');
+    likesCount[i].classList.toggle('like');
+  });
+};
+
+for (var i = 0; i < likeButton.length; i++) {
+  _loop(i);
+}
+
+/***/ }),
+
+/***/ "./src/scripts/mobile-menu.js":
+/*!************************************!*\
+  !*** ./src/scripts/mobile-menu.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var menuToggle = document.querySelector('.header__menu-toggle');
+var line1 = document.querySelector('.menu-toggle__line_1');
+var line2 = document.querySelector('.menu-toggle__line_2');
+var line3 = document.querySelector('.menu-toggle__line_3');
+var headerBackground = document.querySelector('.header__background');
+var headerNav = document.querySelector('.header__nav-up');
+var divArrowUp = document.querySelector('.arrow-up');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', toggleMenu);
+}
+
+if (headerBackground) {
+  headerBackground.addEventListener('click', closeMenu);
+}
+
+function toggleMenu() {
+  menuToggle.classList.toggle('menu-active');
+  line1.classList.toggle('menu-active');
+  line2.classList.toggle('menu-active');
+  line3.classList.toggle('menu-active');
+  headerBackground.classList.toggle('menu-active');
+  headerNav.classList.toggle('menu-active');
+  document.body.classList.toggle('menu-active');
+  divArrowUp.classList.toggle('arrow-up_display-none');
+}
+
+function closeMenu() {
+  menuToggle.classList.remove('menu-active');
+  line1.classList.remove('menu-active');
+  line2.classList.remove('menu-active');
+  line3.classList.remove('menu-active');
+  headerBackground.classList.remove('menu-active');
+  headerNav.classList.remove('menu-active');
+  document.body.classList.remove('menu-active');
+  divArrowUp.classList.remove('arrow-up_display-none');
+}
+
+/***/ }),
+
+/***/ "./src/scripts/subscribe-form.js":
+/*!***************************************!*\
+  !*** ./src/scripts/subscribe-form.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var subscribeEmail = document.querySelector('.subscribe-form__input');
+var subscribeButton = document.querySelector('.subscribe-form__btn');
+var subscribeSuccess = document.querySelector('.subscribe-form__message');
+var reg = /^\w+@\w+\.\w{2,4}$/i;
+
+if (subscribeEmail) {
+  subscribeEmail.oninput = function () {
+    subscribeEmail.classList.remove('invalid');
+  };
+
+  subscribeEmail.addEventListener('focusout', function () {
+    var subscribeEmailValue = subscribeEmail.value;
+
+    if (!reg.test(subscribeEmailValue)) {
+      subscribeEmail.classList.add('invalid');
+    } else {
+      subscribeEmail.classList.remove('invalid');
+    }
+  });
+}
+
+if (subscribeButton) {
+  subscribeButton.addEventListener('click', function () {
+    var btnTriger = true;
+
+    if (!subscribeEmail.value) {
+      subscribeEmail.classList.add('invalid');
+    }
+
+    if (subscribeEmail.classList.contains('invalid')) {
+      btnTriger = false;
+    }
+
+    if (btnTriger) {
+      setTimeout(function () {
+        subscribeEmail.value = '';
+        subscribeEmail.classList.remove('invalid');
+        subscribeSuccess.classList.add('visible');
+        setTimeout(function () {
+          subscribeSuccess.classList.remove('visible');
+        }, 3000);
+      }, 1000);
+    }
+  });
+}
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=bundle.js.map
