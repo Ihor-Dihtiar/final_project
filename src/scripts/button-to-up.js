@@ -9,7 +9,7 @@ if (window.innerWidth < 415) {
   window.addEventListener('scroll', arrow);
 
   function arrow() {
-    if (pageYOffset < document.documentElement.clientHeight) {
+    if (pageYOffset < document.documentElement.clientHeight * 0.5) {
       divArrowUp.classList.add('arrow-up_hidden');
     } else {
       divArrowUp.classList.remove('arrow-up_hidden');
