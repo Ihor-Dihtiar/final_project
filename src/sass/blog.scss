@@ -1,5 +1,5 @@
-@import './mixins';
-@import './variables';
+@import "./mixins";
+@import "./variables";
 
 .content {
   &__blog {
@@ -167,15 +167,18 @@
   display: flex;
   align-items: center;
   height: 34px;
+
   &__wrapper {
     display: flex;
     align-items: center;
     flex: 1 1 auto;
   }
+
   &__icon {
     width: 32px;
     height: 32px;
-    background: url('../img/blog-icon-i.png') 50% / cover no-repeat;
+    background: url("../img/blog-icon-i.png") 50% / cover no-repeat;
+
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -325,6 +328,14 @@
       fill: #e84a43;
     }
   }
+}
+
+.social-bar__link_pinterest {
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  background-position: -111px -73px;
 }
 
 @media (max-width: 415px) {

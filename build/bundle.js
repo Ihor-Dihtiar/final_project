@@ -154,7 +154,11 @@ arrowUpButton.addEventListener('click', function () {
 
 if (window.innerWidth < 415) {
   var arrow = function arrow() {
+<<<<<<< HEAD
     if (pageYOffset < document.documentElement.clientHeight * 0.5) {
+=======
+    
+>>>>>>> 4ddb889f8b00a993f03189e7b7a5c87de2d95b85
       divArrowUp.classList.add('arrow-up_hidden');
     } else {
       divArrowUp.classList.remove('arrow-up_hidden');
