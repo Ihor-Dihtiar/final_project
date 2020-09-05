@@ -1,0 +1,37 @@
+extends ../base
+
+block main
+    .content__portfolio.portfolio
+        .portfolio__common-title.common-title
+            h1.common-title__title portfolio
+    .portfolio__block
+        article.portfolio__item
+            .portfolio__filter
+            .portfolio__img-block.portfolio__img-block_editorial
+                picture
+                    source(media='(max-width: 415px)', srcset='../../images/portfolio/portfolio-editorial-mobile.png')
+                    img.portfolio__img(src='../../images/portfolio/portfolio-left-img.png')
+            .portfolio__text-block
+                h2.portfolio__inscription editorial
+                .portfolio__view-button.view-button
+                    a.view-button__link(href='portfolio.html') View
+        article.portfolio__item
+            .portfolio__filter
+            .portfolio__img-block.portfolio__img-block_food
+                picture
+                    source(media='(max-width: 415px)', srcset='../../images/portfolio/portfolio-food-mobile.png')
+                    img.portfolio__img(src='../../images/portfolio/food-and-serv.png')
+            .portfolio__text-block
+                h2.portfolio__inscription food & serve
+                .portfolio__view-button.view-button
+                    a.view-button__link(href='portfolio.html') View
+        article.portfolio__item
+            .portfolio__filter
+            .portfolio__img-block.portfolio__img-block_goods
+                picture
+                    source(media='(max-width: 415px)', srcset='../../images/portfolio/portfolio-goods-mobile.png')
+                    img.portfolio__img(src='../../images/portfolio/baked-goods.png')
+            .portfolio__text-block
+                h2.portfolio__inscription baked goods
+                .portfolio__view-button.view-button
+                    a.view-button__link(href='portfolio.html') View

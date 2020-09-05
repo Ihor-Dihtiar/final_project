@@ -1,0 +1,51 @@
+@import '../../common/sass/mixins';
+@import '../../common/sass/variables';
+
+//--------------------------------FOOTER--------------------------------------------------------------------------------------------
+
+.footer {
+  padding: 50px 0 25px;
+  &__social-bar {
+    width: 168px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  &__copyright {
+    width: 100%;
+    margin: 15px auto 0;
+  }
+}
+
+.social-bar {
+  &__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    @include normalize-to-block;
+  }
+  &__img {
+    @include normalize-to-block;
+  }
+}
+
+.copyright {
+  &__note {
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+  }
+  &__link {
+    color: #000;
+  }
+}

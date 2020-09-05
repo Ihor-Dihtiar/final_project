@@ -1,0 +1,71 @@
+@import '../../common/sass/mixins';
+@import '../../common/sass/variables';
+
+//--------------------------------HEADER--------------------------------------------------------------------------------------------
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+
+  &__signature {
+    height: 40px;
+    min-height: 36px;
+    width: 144px;
+    margin-top: 42px;
+    margin-left: 80px;
+  }
+  &__nav-up {
+    width: 754px;
+    height: 50px;
+    margin-top: 31px;
+    margin-right: 48px;
+  }
+}
+
+.signature {
+  &__link {
+    font-size: 26px;
+    line-height: 40px;
+    font-family: $cinzel-font;
+    color: $main-text-color;
+    letter-spacing: 6px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+.nav-up {
+  &__list {
+    width: 100%;
+    display: flex;
+  }
+  &__item {
+    flex-grow: 1;
+  }
+  &__link {
+    @include normalize-to-block;
+    line-height: 50px;
+    color: $main-text-color;
+    height: 100%;
+    text-align: center;
+    transition: color 0.4s ease 0s;
+    &:hover {
+      color: $active-link-color;
+    }
+
+    &_about-page {
+      color: $active-link-color;
+    }
+    &_books-page {
+      color: $active-link-color;
+    }
+    &_blog {
+      color: $active-link-color;
+    }
+    &_contact {
+      color: $active-link-color;
+    }
+  }
+}
