@@ -5,7 +5,7 @@
       {
         "modules": "cjs"
       }
-    ]
-  ],
-  "plugins": ["@babel/plugin-proposal-object-rest-spread"]
+    ],
+    ["@babel/preset-react"]
+  ]
 }
