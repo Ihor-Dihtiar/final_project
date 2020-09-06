@@ -54,18 +54,129 @@
     &:hover {
       color: $active-link-color;
     }
+  }
+}
 
-    &_about-page {
-      color: $active-link-color;
+//--------------------------------MEDIA QUERIES--------------------------------------------------------------------------------------------
+
+@media (max-width: 415px) {
+  .header {
+    &__signature {
+      height: 50px;
+      margin: 28px 0px 16px 0;
+      display: flex;
+      align-items: center;
     }
-    &_books-page {
-      color: $active-link-color;
+    &__menu-toggle {
+      width: 50px;
+      height: 50px;
+      margin-top: 28px;
+      z-index: 2;
+      cursor: pointer;
+      &.menu-active {
+        position: fixed;
+        top: 0;
+        right: 20px;
+      }
     }
-    &_blog {
-      color: $active-link-color;
+    &__background {
+      pointer-events: none;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      background-color: #303131;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+      &.menu-active {
+        opacity: 0.6;
+        visibility: visible;
+        pointer-events: auto;
+      }
     }
-    &_contact {
-      color: $active-link-color;
+    &__nav-up {
+      width: 80%;
+      margin: 0;
+      z-index: 1;
+      background-color: #fff;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+      &.menu-active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .signature {
+    &__link {
+      font-size: 23px;
+    }
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+      width: 22px;
+      height: 20px;
+      position: relative;
+    }
+    &__line {
+      background-color: rgba(48, 49, 49, 1);
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      &_1 {
+        &.menu-active {
+          transform: translateY(10px) translateY(-50%) rotate(-45deg);
+        }
+      }
+      &_2 {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        &.menu-active {
+          opacity: 0;
+        }
+      }
+      &_3 {
+        bottom: 0;
+        &.menu-active {
+          transform: translateY(-10px) translateY(50%) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .nav-up {
+    &__list {
+      flex-direction: column;
+      margin-top: 100px;
+    }
+    &__item {
+      width: 188px;
+      margin-left: 40px;
+    }
+    &__link {
+      line-height: 56px;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 400;
     }
   }
 }

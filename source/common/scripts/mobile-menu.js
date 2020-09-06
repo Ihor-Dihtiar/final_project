@@ -1,3 +1,5 @@
+//--------------------------------MENU BEHAVIOR ON A MOBILE DEVICE--------------------------------------------------------------------------------------------
+
 const menuToggle = document.querySelector('.header__menu-toggle');
 const line1 = document.querySelector('.menu-toggle__line_1');
 const line2 = document.querySelector('.menu-toggle__line_2');

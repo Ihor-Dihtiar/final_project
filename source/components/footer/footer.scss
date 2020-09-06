@@ -49,3 +49,43 @@
     color: #000;
   }
 }
+
+//--------------------------------MEDIA QUERIES--------------------------------------------------------------------------------------------
+
+@media (max-width: 415px) {
+  .footer {
+    padding-top: 37px;
+    &__copyright {
+      width: auto;
+    }
+  }
+
+  .common-title {
+    height: 74px;
+    &__title {
+      font-size: 30px;
+      line-height: 1.2em;
+      letter-spacing: 0.05em;
+      &_contact {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .social-bar {
+    width: auto;
+    height: auto;
+    &__item {
+      width: 28px;
+      height: 28px;
+      margin-right: 18px;
+    }
+  }
+
+  .copyright {
+    &__note {
+      width: 245px;
+      margin: 0 auto;
+    }
+  }
+}

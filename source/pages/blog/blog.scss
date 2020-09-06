@@ -1,5 +1,13 @@
-@import './mixins';
-@import './variables';
+@import '../../common/sass/mixins';
+@import '../../common/sass/variables';
+
+//--------------------------------STYLE TO HIGHLIGHT A LINK TO A PAGE IN THE NAVIGATION BAR--------------------------------------------------------------------------------------------
+
+.nav-up__link_blog {
+  color: $active-link-color;
+}
+
+//--------------------------------STYLES OF THE BLOG PAGE----------------------------------------------------------------------------------------------------------------------------
 
 .content {
   &__blog {
@@ -177,7 +185,7 @@
   &__icon {
     width: 32px;
     height: 32px;
-    background: url('../img/blog-icon-i.png') 50% / cover no-repeat;
+    background: url('../../images/blog/blog-icon-i.png') 50% / cover no-repeat;
 
     border-radius: 50%;
     overflow: hidden;
@@ -329,6 +337,8 @@
     }
   }
 }
+
+//--------------------------------MEDIA QUERIES----------------------------------------------------------------------------------------------------------------------------
 
 @media (max-width: 415px) {
   .blog {

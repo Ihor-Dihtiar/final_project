@@ -1,0 +1,113 @@
+@import '../../common/sass/mixins';
+@import '../../common/sass/variables';
+
+//--------------------------------STYLE TO HIGHLIGHT A LINK TO A PAGE IN THE NAVIGATION BAR--------------------------------------------------------------------------------------------
+
+.nav-up__link_about {
+  color: $active-link-color;
+}
+
+//--------------------------------STYLES OF THE ABOUT PAGE----------------------------------------------------------------------------------------------------------------------------
+
+.content {
+  &__about {
+    width: 100%;
+    height: 884px;
+  }
+}
+
+.about {
+  display: flex;
+
+  &__left-block {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__img {
+    @include normalize-to-block;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+  }
+
+  &__right-block {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.right-block {
+  background-color: #f0f3f6;
+  &__container {
+    width: 425px;
+    height: 100%;
+    margin-left: calc((100% - 490px) * 0.5);
+    position: relative;
+    left: 18px;
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: $cinzel-font;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 156px;
+    margin-bottom: 27px;
+  }
+  &__paragraph {
+    line-height: 1.5rem;
+  }
+  &__subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5rem;
+    &_education {
+      margin-top: 49px;
+      margin-bottom: 13px;
+    }
+    &_awards {
+      margin-top: 59px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+//--------------------------------MEDIA QUERIES----------------------------------------------------------------------------------------------------------------------------
+
+@media (max-width: 415px) {
+  .content {
+    &__about {
+      display: initial;
+      height: auto;
+    }
+  }
+
+  .right-block {
+    padding: 0 20px;
+    &__container {
+      width: 92%;
+      margin: 0;
+      position: initial;
+      padding-top: 50px;
+      padding-bottom: 64px;
+    }
+    &__title {
+      margin: 0 0 14px;
+      font-size: 30px;
+      line-height: 1.2em;
+      letter-spacing: 0.05em;
+    }
+    &__subtitle {
+      &_education {
+        margin-top: 33px;
+        margin-bottom: 10px;
+      }
+      &_awards {
+        margin-top: 51px;
+        margin-bottom: 9px;
+      }
+    }
+  }
+}

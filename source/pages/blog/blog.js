@@ -1,7 +1,9 @@
 import '../../common/scripts/mobile-menu.js';
 import '../../common/scripts/button-to-up.js';
+import './scripts/searchBlock.js';
+import './scripts/like.js';
 
 import '../../common/sass/base.scss';
-import './index.scss';
+import './blog.scss';
 
-console.log('SCRIPT ON MAIN PAGE IS WORKING');
+console.log('SCRIPT ON BLOG PAGE IS WORKING');

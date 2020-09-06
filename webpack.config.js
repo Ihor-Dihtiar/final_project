@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { merge } = require('webpack-merge');
+const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
@@ -21,6 +21,9 @@ const common = merge([
     entry: {
       index: path.join(PATHS.source, 'pages', 'index', 'index.js'),
       portfolio: path.join(PATHS.source, 'pages', 'portfolio', 'portfolio.js'),
+      about: path.join(PATHS.source, 'pages', 'about', 'about.js'),
+      books: path.join(PATHS.source, 'pages', 'books', 'books.js'),
+      blog: path.join(PATHS.source, 'pages', 'blog', 'blog.js'),
     },
     output: {
       path: PATHS.build,
@@ -42,6 +45,24 @@ const common = merge([
           'portfolio',
           'portfolio.pug'
         ),
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'about.html',
+        chunks: ['about', 'common'],
+        template: path.join(PATHS.source, 'pages', 'about', 'about.pug'),
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'books.html',
+        chunks: ['books', 'common'],
+        template: path.join(PATHS.source, 'pages', 'books', 'books.pug'),
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'blog.html',
+        chunks: ['blog', 'common'],
+        template: path.join(PATHS.source, 'pages', 'blog', 'blog.pug'),
       }),
     ],
     optimization: {

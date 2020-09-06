@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=320, user-scalable=yes')
+    meta(id='viewPort', name='viewport', content='width=device-width, initial-scale=1.0')
     title Home
     link(href='https://fonts.googleapis.com/css?family=Cinzel&display=swap', rel='stylesheet')
   body
@@ -15,10 +15,11 @@ html(lang='en')
             //--------------------------------PAGE CONTENT--------------------------------------------------------------------------------------------
             main.page__content.content
 
-                block main
+              //--------------------------------PASTING PAGES--------------------------------------------------------------------------------------------
+              block main
 
-                //--------------------------------CONNECTING BUTTON TO UP--------------------------------------------------------------------------------------------
-                include ../components/button-to-up/button-to-up
+              //--------------------------------CONNECTING BUTTON TO UP--------------------------------------------------------------------------------------------
+              include ../components/button-to-up/button-to-up
             
             //--------------------------------CONNECTING FOOTER--------------------------------------------------------------------------------------------
             include ../components/footer/footer
