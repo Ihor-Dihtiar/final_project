@@ -24,6 +24,7 @@ const common = merge([
       about: path.join(PATHS.source, 'pages', 'about', 'about.js'),
       books: path.join(PATHS.source, 'pages', 'books', 'books.js'),
       blog: path.join(PATHS.source, 'pages', 'blog', 'blog.js'),
+      contact: path.join(PATHS.source, 'pages', 'contact', 'contact.js'),
     },
     output: {
       path: PATHS.build,
@@ -63,6 +64,12 @@ const common = merge([
         filename: 'blog.html',
         chunks: ['blog', 'common'],
         template: path.join(PATHS.source, 'pages', 'blog', 'blog.pug'),
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: 'contact.html',
+        chunks: ['contact', 'common'],
+        template: path.join(PATHS.source, 'pages', 'contact', 'contact.pug'),
       }),
     ],
     optimization: {

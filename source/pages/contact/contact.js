@@ -5,5 +5,3 @@ import './scripts/subscribe-form.js';
 
 import '../../common/sass/base.scss';
 import './contact.scss';
-
-console.log('SCRIPT ON contact PAGE IS WORKING');
