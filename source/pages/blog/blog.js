@@ -5,5 +5,3 @@ import './scripts/like.js';
 
 import '../../common/sass/base.scss';
 import './blog.scss';
-
-console.log('SCRIPT ON BLOG PAGE IS WORKING');

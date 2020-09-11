@@ -45,8 +45,6 @@ if (submitButton) {
       }
     });
 
-    console.log(formInput[0].value.length);
-
     if (btnTriger) {
       setTimeout(() => {
         formInput.forEach((element) => {

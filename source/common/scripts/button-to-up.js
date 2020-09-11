@@ -26,10 +26,4 @@ if (arrowUpButton) {
       }
     }
   }
-
-  console.log('window.innerWidth : ' + window.innerWidth);
-  console.log(
-    'document.documentElement.clientWidth : ' +
-      document.documentElement.clientWidth
-  );
 }
