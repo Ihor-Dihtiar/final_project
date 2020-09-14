@@ -19,12 +19,15 @@
 
 .inscription-block {
   &__img-block {
-    background: url('../../images/index/main-bgd-1506x900.png') center
-      center/cover no-repeat;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.65;
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
   &__text-block {
     width: 100%;

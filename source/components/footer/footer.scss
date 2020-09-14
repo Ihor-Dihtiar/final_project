@@ -33,9 +33,7 @@
   }
   &__link {
     @include normalize-to-block;
-  }
-  &__img {
-    @include normalize-to-block;
+    height: 100%;
   }
 }
 

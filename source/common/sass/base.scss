@@ -133,6 +133,29 @@ a {
   }
 }
 
+.icon {
+  &__pinterest {
+    font-size: 24px;
+    width: 1em;
+    height: 1em;
+  }
+  &__facebook {
+    font-size: 24px;
+    width: 1em;
+    height: 1em;
+  }
+  &__twitter {
+    font-size: 24px;
+    width: 1em;
+    height: 1em;
+  }
+  &__instagram {
+    font-size: 24px;
+    width: 1em;
+    height: 1em;
+  }
+}
+
 //--------------------------------MEDIA QUERIES--------------------------------------------------------------------------------------------
 
 @media (max-width: 415px) {
