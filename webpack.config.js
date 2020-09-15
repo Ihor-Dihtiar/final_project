@@ -14,7 +14,7 @@ const babel = require('./webpack/babel');
 
 const PATHS = {
   source: path.join(__dirname, 'source'),
-  build: path.join(__dirname, 'build'),
+  docs: path.join(__dirname, 'docs'),
 };
 const common = merge([
   {
@@ -27,7 +27,7 @@ const common = merge([
       contact: path.join(PATHS.source, 'pages', 'contact', 'contact.js'),
     },
     output: {
-      path: PATHS.build,
+      path: PATHS.docs,
       filename: path.join('.', 'scripts', '[name].js'),
     },
     plugins: [

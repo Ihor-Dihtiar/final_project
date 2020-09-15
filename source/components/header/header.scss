@@ -109,6 +109,7 @@
       opacity: 0;
       visibility: hidden;
       transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+      overflow-y: auto;
       &.menu-active {
         transform: translateX(0);
         opacity: 1;
