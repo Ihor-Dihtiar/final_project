@@ -1,25 +1,46 @@
 //--------------------------------HEADER--------------------------------------------------------------------------------------------
 
-header.page__header.header
-  .header__signature.signature
-    a.signature__link(href='index.html') J.ALISSA
-  .header__menu-toggle.menu-toggle
-    .menu-toggle__wrapper
-      span.menu-toggle__line.menu-toggle__line_1
-      span.menu-toggle__line.menu-toggle__line_2
-      span.menu-toggle__line.menu-toggle__line_3
+header.header
   .header__background
-  nav.header__nav-up.nav-up
-    ul.nav-up__list
-      li.nav-up__item
-        a.nav-up__link.nav-up__link_home( href='index.html') Home
-      li.nav-up__item
-        a.nav-up__link.nav-up__link_portfolio-page(href='portfolio.html') Portfolio
-      li.nav-up__item
-        a.nav-up__link.nav-up__link_about(href='about.html') About
-      li.nav-up__item
-        a.nav-up__link.nav-up__link_books(href='books.html') Books
-      li.nav-up__item
-        a.nav-up__link.nav-up__link_blog(href='blog.html') Blog
-      li.nav-up__item
-        a.nav-up__link.nav-up__link_contact(href='contact.html') Contact
+  .container
+    .header__inner
+      .header__signature.signature
+        a.signature__link(href='index.html') J.ALISSA
+
+      nav.header__nav-up.nav-up
+        ul.nav-up__list
+          li
+            a.nav-up__link.nav-up__link_home( href='index.html') Home
+          li
+            a.nav-up__link.nav-up__link_portfolio-page(href='portfolio.html') Portfolio
+          li
+            a.nav-up__link.nav-up__link_about(href='about.html') About
+          li
+            a.nav-up__link.nav-up__link_books(href='books.html') Books
+          li
+            a.nav-up__link.nav-up__link_blog(href='blog.html') Blog
+          li
+            a.nav-up__link.nav-up__link_contact(href='contact.html') Contact
+
+      .header__mobile-menu
+
+        button.header__menu-toggle.menu-toggle
+          .menu-toggle__wrapper
+            span.menu-toggle__line.menu-toggle__line_1
+            span.menu-toggle__line.menu-toggle__line_2
+            span.menu-toggle__line.menu-toggle__line_3
+        
+        nav.mobile-menu__nav-up
+          ul.nav-up__list
+            li
+              a.nav-up__link.nav-up__link_home( href='index.html') Home
+            li
+              a.nav-up__link.nav-up__link_portfolio-page(href='portfolio.html') Portfolio
+            li
+              a.nav-up__link.nav-up__link_about(href='about.html') About
+            li
+              a.nav-up__link.nav-up__link_books(href='books.html') Books
+            li
+              a.nav-up__link.nav-up__link_blog(href='blog.html') Blog
+            li
+              a.nav-up__link.mobile-menu__link_contact(href='contact.html') Contact

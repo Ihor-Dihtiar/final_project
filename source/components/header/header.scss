@@ -4,23 +4,60 @@
 //--------------------------------HEADER--------------------------------------------------------------------------------------------
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff;
-
+  z-index: 1;
+  &__background {
+    display: none;
+    pointer-events: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #303131;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+    &.menu-active {
+      opacity: 0.6;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+  }
   &__signature {
     height: 40px;
     min-height: 36px;
     width: 144px;
     margin-top: 42px;
-    margin-left: 80px;
   }
   &__nav-up {
-    width: 754px;
-    height: 50px;
     margin-top: 31px;
-    margin-right: 48px;
+  }
+  &__menu-toggle {
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    &.menu-active {
+    }
+  }
+  &__mobile-menu {
+    display: none;
   }
 }
 
@@ -37,146 +74,135 @@
 }
 
 .nav-up {
+  width: 700px;
+  max-width: 70%;
   &__list {
     width: 100%;
     display: flex;
+    & li {
+      width: 100%;
+    }
+    & a {
+      display: block;
+      line-height: 50px;
+      margin: 0 10px;
+      color: $main-text-color;
+      text-align: center;
+      transition: color 0.4s ease 0s;
+      &:hover {
+        color: $active-link-color;
+      }
+    }
+    & li:last-child a {
+      padding-right: 0;
+      margin-right: 0;
+    }
   }
-  &__item {
-    flex-grow: 1;
+}
+
+.menu-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper {
+    width: 22px;
+    height: 22px;
+    position: relative;
   }
-  &__link {
-    @include normalize-to-block;
-    line-height: 50px;
-    color: $main-text-color;
+  &__line {
+    background-color: rgba(48, 49, 49, 1);
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    &_1 {
+      top: 2px;
+      &.menu-active {
+        transform: translateY(9px) translateY(-50%) rotate(-45deg);
+      }
+    }
+    &_2 {
+      top: 10px;
+      &.menu-active {
+        opacity: 0;
+      }
+    }
+    &_3 {
+      top: 18px;
+      &.menu-active {
+        transform: translateY(-9px) translateY(50%) rotate(45deg);
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  &__nav-up {
+    width: 50%;
+    margin: 0;
+    z-index: 1;
+    background-color: #fff;
     height: 100%;
-    text-align: center;
-    transition: color 0.4s ease 0s;
-    &:hover {
-      color: $active-link-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+    overflow-y: auto;
+    &.menu-active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    & .nav-up__list {
+      flex-direction: column;
+      margin-top: 100px;
+      & li {
+        width: 60%;
+        margin-left: 40px;
+      }
+      & a {
+        line-height: 56px;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+      }
     }
   }
 }
 
 //--------------------------------MEDIA QUERIES--------------------------------------------------------------------------------------------
 
-@media (max-width: 415px) {
+@media (max-width: 768px) {
   .header {
+    &__background {
+      display: block;
+    }
     &__signature {
-      height: 50px;
-      margin: 28px 0px 16px 0;
+      margin: 36px 0px 16px 0;
       display: flex;
       align-items: center;
     }
-    &__menu-toggle {
-      width: 50px;
-      height: 50px;
-      margin-top: 28px;
-      z-index: 2;
-      cursor: pointer;
-      &.menu-active {
-        position: fixed;
-        top: 0;
-        right: 20px;
-      }
+
+    &__nav-up {
+      display: none;
     }
-    &__background {
-      pointer-events: none;
-      position: fixed;
-      height: 100vh;
-      width: 100vw;
-      top: 0;
-      right: 0;
-      background-color: #303131;
-      opacity: 0;
-      visibility: hidden;
-      transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
-      &.menu-active {
-        opacity: 0.6;
-        visibility: visible;
-        pointer-events: auto;
-      }
+    &__mobile-menu {
+      display: initial;
     }
+  }
+}
+
+@media (max-width: 415px) {
+  .mobile-menu {
     &__nav-up {
       width: 80%;
-      margin: 0;
-      z-index: 1;
-      background-color: #fff;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      right: 0;
-      transform: translateX(100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
-      overflow-y: auto;
-      &.menu-active {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
-  .signature {
-    &__link {
-      font-size: 23px;
-    }
-  }
-
-  .menu-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__wrapper {
-      width: 22px;
-      height: 22px;
-      position: relative;
-    }
-    &__line {
-      background-color: rgba(48, 49, 49, 1);
-      height: 2px;
-      width: 100%;
-      border-radius: 2px;
-      position: absolute;
-      left: 0;
-      -webkit-transition: all 0.25s ease-in-out;
-      transition: all 0.25s ease-in-out;
-      &_1 {
-        top: 2px;
-        &.menu-active {
-          transform: translateY(9px) translateY(-50%) rotate(-45deg);
-        }
-      }
-      &_2 {
-        top: 10px;
-        &.menu-active {
-          opacity: 0;
-        }
-      }
-      &_3 {
-        top: 18px;
-        &.menu-active {
-          transform: translateY(-9px) translateY(50%) rotate(45deg);
-        }
-      }
-    }
-  }
-
-  .nav-up {
-    &__list {
-      flex-direction: column;
-      margin-top: 100px;
-    }
-    &__item {
-      width: 188px;
-      margin-left: 40px;
-    }
-    &__link {
-      line-height: 56px;
-      text-align: left;
-      font-size: 18px;
-      font-weight: 400;
     }
   }
 }
