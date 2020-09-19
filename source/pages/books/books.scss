@@ -3,20 +3,16 @@
 
 //--------------------------------STYLE TO HIGHLIGHT A LINK TO A PAGE IN THE NAVIGATION BAR--------------------------------------------------------------------------------------------
 
-.nav-up__link_books {
+.nav-up__list .nav-up__link_books {
   color: $active-link-color;
 }
 
 //--------------------------------STYLES OF THE BOOKS PAGE----------------------------------------------------------------------------------------------------------------------------
 
-.content {
-  &__books {
-    width: 100%;
-  }
-}
-
 .books {
+  width: 100%;
   &__goods {
+    display: flex;
     width: 100%;
     height: 720px;
     margin-top: 15px;
@@ -30,12 +26,14 @@
 }
 
 .goods {
+  &__article-left {
+    width: 50%;
+  }
   &__container {
-    width: 438px;
+    margin-left: auto;
+    margin-right: 75px;
+    width: 385px;
     height: 100%;
-    position: relative;
-    left: 35px;
-    margin-left: calc((100% - 980px) * 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,23 +75,32 @@
     width: 135px;
     margin-left: 122px;
   }
+  &__article-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
   &__img-block {
     width: 600px;
     height: 438px;
-    position: absolute;
-    margin: 141px 0px 0px calc((100% - 980px) * 0.5);
-    left: 478px;
-    top: 0;
   }
+
   &__img {
-    object-position: 50% 50%;
-    width: 600px;
-    height: 438px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
 
 //--------------------------------MEDIA QUERIES----------------------------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1280px) {
+  .goods {
+    &__container {
+      margin-right: 30px;
+    }
+  }
+}
 
 @media (max-width: 415px) {
   .books {
