@@ -2,16 +2,23 @@
 
 const divArrowUp = document.querySelector('.arrow-up');
 const arrowUpButton = document.querySelector('.arrow-up__btn');
-let viewPort = document.getElementById('viewPort');
 
 if (arrowUpButton) {
   arrowUpButton.addEventListener('click', () => {
     window.scrollTo(pageXOffset, 0);
   });
 
-  if (document.documentElement.clientWidth < 415) {
+  console.log(
+    'document.documentElement.clientHeight = ' +
+      document.documentElement.clientHeight
+  );
+  console.log(
+    'document.documentElement.clientWidth = ' +
+      document.documentElement.clientWidth
+  );
+
+  if (document.documentElement.clientWidth < 769) {
     window.addEventListener('scroll', arrow);
-    viewPort.setAttribute('content', 'width=320, user-scalable=yes');
 
     function arrow() {
       if (pageYOffset < document.documentElement.clientHeight * 0.5) {

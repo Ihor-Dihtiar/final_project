@@ -3,24 +3,18 @@
 
 //--------------------------------STYLE TO HIGHLIGHT A LINK TO A PAGE IN THE NAVIGATION BAR--------------------------------------------------------------------------------------------
 
-.nav-up__link_portfolio-page {
+.nav-up__list .nav-up__link_portfolio-page {
   color: $active-link-color;
 }
 
 //--------------------------------STYLES OF THE PORTFOLIO PAGE----------------------------------------------------------------------------------------------------------------------------
-
-.content {
-  &__portfolio {
-    width: 100%;
-  }
-}
 
 .portfolio {
   &__block {
     width: 100%;
     min-height: 869px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(318px, 1fr));
+    grid-template-columns: repeat(3, minmax(270px, 1fr));
     grid-column-gap: 11px;
   }
   &__item {
@@ -38,7 +32,6 @@
     opacity: 0.77;
   }
   &__img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -50,6 +43,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   &__inscription {
     color: #fff;
@@ -58,7 +52,7 @@
     font-family: $cinzel-font;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: 331px;
+    text-align: center;
   }
   &__view-button {
     width: 110px;
@@ -68,24 +62,32 @@
 
 //--------------------------------MEDIA QUERIES----------------------------------------------------------------------------------------------------------------------------
 
+@media (max-width: 992px) {
+  .portfolio {
+    &__block {
+      grid-template-columns: repeat(1, minmax(270px, 1fr));
+      grid-row-gap: 15px;
+      min-height: 1200px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    &__inscription {
+      font-size: 30px;
+      line-height: normal;
+    }
+  }
+}
+
 @media (max-width: 415px) {
   .portfolio {
     &__block {
-      grid-template-columns: repeat(1, minmax(318px, 1fr));
-      grid-row-gap: 15px;
       min-height: auto;
     }
     &__item {
       min-height: 300px;
-    }
-
-    &__text-block {
-      justify-content: center;
-    }
-    &__inscription {
-      margin-top: 0;
-      font-size: 30px;
-      line-height: normal;
     }
     &__view-button {
       margin-top: 13px;

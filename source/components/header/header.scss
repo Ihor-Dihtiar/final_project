@@ -53,8 +53,6 @@
     position: absolute;
     top: 28px;
     right: 20px;
-    &.menu-active {
-    }
   }
   &__mobile-menu {
     display: none;
@@ -181,6 +179,7 @@
 
 @media (max-width: 768px) {
   .header {
+    position: relative;
     &__background {
       display: block;
     }

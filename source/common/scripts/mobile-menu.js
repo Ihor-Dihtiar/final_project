@@ -23,7 +23,7 @@ function toggleMenu() {
   headerBackground.classList.toggle('menu-active');
   mobileMenuNav.classList.toggle('menu-active');
   document.body.classList.toggle('menu-active');
-  divArrowUp.classList.toggle('arrow-up_display-none');
+  divArrowUp.classList.add('arrow-up_hidden');
 }
 
 function closeMenu() {
@@ -34,5 +34,4 @@ function closeMenu() {
   headerBackground.classList.remove('menu-active');
   mobileMenuNav.classList.remove('menu-active');
   document.body.classList.remove('menu-active');
-  divArrowUp.classList.remove('arrow-up_display-none');
 }

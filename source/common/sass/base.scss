@@ -154,37 +154,28 @@ button {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
-}
-
-@media (max-width: 415px) {
-  //--------------------------------COMMON--------------------------------------------------------------------------------------------
-
   body {
     &.menu-active {
       overflow: hidden;
     }
   }
 
-  .page {
-    &__header {
-      min-width: auto;
-      height: 95px;
-      padding: 0 20px;
-      position: relative;
-    }
-    &__content {
-      width: 100%;
-      min-width: auto;
-      margin-top: 0;
-    }
-    .footer {
-      min-width: auto;
-    }
+  .container {
+    padding: 0 20px;
   }
 
+  .main {
+    margin: 0;
+  }
+
+  .common-title {
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 415px) {
   .view-button {
     height: 45px;
   }
