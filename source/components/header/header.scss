@@ -91,10 +91,6 @@
         color: $active-link-color;
       }
     }
-    & li:last-child a {
-      padding-right: 0;
-      margin-right: 0;
-    }
   }
 }
 
@@ -193,7 +189,7 @@
       display: none;
     }
     &__mobile-menu {
-      display: initial;
+      display: block;
     }
   }
 }

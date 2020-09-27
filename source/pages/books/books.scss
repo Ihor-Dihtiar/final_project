@@ -50,6 +50,7 @@
     width: 355px;
     margin-top: 20px;
     line-height: 1.5rem;
+    min-height: 6rem;
   }
   &__price-container {
     margin-top: 28px;
@@ -130,7 +131,6 @@
       align-items: center;
     }
     &__img {
-      // object-position: left;
       height: 300px;
     }
   }

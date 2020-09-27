@@ -3,7 +3,7 @@
 
 //--------------------------------STYLE TO HIGHLIGHT A LINK TO A PAGE IN THE NAVIGATION BAR--------------------------------------------------------------------------------------------
 
-.nav-up__link_blog {
+.nav-up__list .nav-up__link_blog {
   color: $active-link-color;
 }
 
@@ -149,6 +149,7 @@
   &__img {
     @include normalize-to-block;
     height: 100%;
+    object-fit: cover;
   }
   &__img-link {
     position: absolute;
@@ -342,23 +343,28 @@
 
 //--------------------------------MEDIA QUERIES----------------------------------------------------------------------------------------------------------------------------
 
-@media (max-width: 415px) {
+@media (max-width: 992px) {
+  .blog {
+    & .container {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .blog {
     &__search {
       background-color: #273a4e;
     }
-    &__posts :last-of-type .post__description {
-      padding-bottom: 0;
-    }
   }
 
   .search {
-    height: 50px;
+    height: 60px;
     &__all-posts {
       display: none;
     }
     &__blog {
-      display: initial;
+      display: block;
       color: #fff;
       font-weight: normal;
       font-size: 0.88rem;
@@ -389,9 +395,8 @@
   }
 
   .post {
-    padding: 0;
     &__wrapper {
-      display: initial;
+      display: block;
       height: auto;
       width: 100%;
     }

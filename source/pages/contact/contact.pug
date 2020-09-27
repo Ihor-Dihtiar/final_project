@@ -1,44 +1,46 @@
 extends ../base
 
 block main
-    .content__contact.contact
-        .contact__img-block
-            picture
-                source(media='(max-width: 415px)', srcset='../../images/contact/mobile-contact.png')
-                img.contact__img(src='../../images/contact/contact.png')
-        
-        .contact__info-block.info-block
-            .info-block__description
-                h1.info-block__title.common-title__title.common-title__title_contact GET IN TOUCH
-                p.info-block__text I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
-                p.info-block__text.info-block__text_tel Tel: 123-456-7890 | Email:
-                    a.info-block__mail(href='#') info@mysite.com
+    .contact
+        .container
+            .contact-inner
+                .contact__img-block
+                    picture
+                        source(media='(max-width: 768px)', srcset='../../images/contact/mobile-contact.png')
+                        img.contact__img(src='../../images/contact/contact.png')
                 
-                form.contact-form(action='#', method='POST')
-                    label.contact-form__label.form__label(for='name' ) Enter Your Name *
-                    input#name.contact-form__input.form__input.field-validation(type='text', placeholder='Name', minlength='2', maxlength='20' required)
+                .contact__info-block.info-block
+                    .info-block__description
+                        h1.info-block__title.common-title__title.common-title__title_contact GET IN TOUCH
+                        p.info-block__text I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
+                        p.info-block__text.info-block__text_tel Tel: 123-456-7890 | Email:
+                            a.info-block__mail(href='#') info@mysite.com
+                        
+                        form.contact-form(action='#', method='POST')
+                            label.contact-form__label.form__label(for='name' ) Enter Your Name *
+                            input#name.contact-form__input.form__input.field-validation(type='text', placeholder='Name', minlength='2', maxlength='20' required)
 
-                    label.contact-form__label.form__label(for='email') Enter Your Email *
-                    input#email.contact-form__input.form__input.mail-validation.field-validation(type='email', placeholder='Email', value='', maxlength='30' required)
+                            label.contact-form__label.form__label(for='email') Enter Your Email *
+                            input#email.contact-form__input.form__input.mail-validation.field-validation(type='email', placeholder='Email', value='', maxlength='30' required)
 
-                    label.contact-form__label.form__label(for='subject') Enter Your Subject *
-                    input#subject.contact-form__input.form__input.field-validation(type='text', placeholder='Subject', minlength='2', maxlength='20' required)
+                            label.contact-form__label.form__label(for='subject') Enter Your Subject *
+                            input#subject.contact-form__input.form__input.field-validation(type='text', placeholder='Subject', minlength='2', maxlength='20' required)
 
-                    label.contact-form__label.form__label(for='message') Enter Your Message Here *
-                    textarea#message.contact-form__textarea.field-validation(name='message', placeholder='Message', minlength='2', maxlength='150' required)
+                            label.contact-form__label.form__label(for='message') Enter Your Message Here *
+                            textarea#message.contact-form__textarea.field-validation(name='message', placeholder='Message', minlength='2', maxlength='150' required)
 
-                    input.contact-form__btn.form__btn(type='submit', value='Submit')
-                    .contact-form__message
-                        p.contact-form__thank Thanks for submitting!
+                            input.contact-form__btn.form__btn(type='submit', value='Submit')
+                            .contact-form__message
+                                p.contact-form__thank Thanks for submitting!
 
-                form.subscribe-form(action='', method='POST')
-                    p.subscribe-form__paragraph Stay Up-To-Date with New Posts
-                    label.subscribe-form__label.form__label(for='subscribe-email') Enter your email here *
-                    .subscribe-form__input-btn
-                        input#subscribe-email.subscribe-form__input.form__input(type='email', placeholder='Email', maxlength='30' required)
-                        input.subscribe-form__btn.form__btn(type='submit', value='Subscribe Now')
-                    .subscribe-form__message
-                        p.subscribe-form__thank Thanks for submitting!
+                        form.subscribe-form(action='', method='POST')
+                            p.subscribe-form__paragraph Stay Up-To-Date with New Posts
+                            label.subscribe-form__label.form__label(for='subscribe-email') Enter your email here *
+                            .subscribe-form__input-btn
+                                input#subscribe-email.subscribe-form__input.form__input(type='email', placeholder='Email', maxlength='30' required)
+                                input.subscribe-form__btn.form__btn(type='submit', value='Subscribe Now')
+                            .subscribe-form__message
+                                p.subscribe-form__thank Thanks for submitting!
 
 
 
