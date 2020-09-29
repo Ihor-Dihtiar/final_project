@@ -11,6 +11,7 @@ const sourceMap = require('./webpack/sourceMap');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 const babel = require('./webpack/babel');
+const favicon = require('./webpack/favicon');
 
 const PATHS = {
   source: path.join(__dirname, 'source'),
@@ -94,9 +95,9 @@ const common = merge([
 
 module.exports = function (env, argv) {
   if (argv.mode === 'production') {
-    return merge([common, extractCSS()]);
+    return merge([common, extractCSS(), favicon()]);
   }
   if (argv.mode === 'development') {
-    return merge([common, devserver(), sass(), css(), sourceMap()]);
+    return merge([common, devserver(), sass(), css(), favicon(), sourceMap()]);
   }
 };

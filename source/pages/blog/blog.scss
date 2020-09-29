@@ -34,6 +34,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 972px;
+    padding-bottom: 15px;
   }
 }
 
@@ -356,6 +357,9 @@
     &__search {
       background-color: #273a4e;
     }
+    &__posts {
+      padding-bottom: 0;
+    }
   }
 
   .search {
@@ -395,6 +399,7 @@
   }
 
   .post {
+    padding: 0;
     &__wrapper {
       display: block;
       height: auto;

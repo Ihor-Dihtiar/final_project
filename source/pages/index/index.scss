@@ -11,7 +11,7 @@
 
 .inscription-block {
   width: 100%;
-  min-height: calc(100vh - 253px);
+  min-height: 900px;
   position: relative;
   &__img-block {
     position: absolute;
@@ -73,6 +73,7 @@
 
 @media (max-width: 768px) {
   .inscription-block {
+    min-height: 441px;
     &__title {
       font-size: calc(34px + ((100vw - 320px) / 17));
     }

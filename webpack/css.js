@@ -1,16 +1,13 @@
-module.exports = function(paths) {
+module.exports = function (paths) {
   return {
     module: {
       rules: [
         {
           test: /\.css$/,
           include: paths,
-          use: [
-            'style-loader',
-            'css-loader',
-          ],
+          use: ['style-loader', 'css-loader', 'postcss-loader'],
         },
-      ], 
-    }, 
-  }; 
+      ],
+    },
+  };
 };
